@@ -1,0 +1,1 @@
+[{"id":"endoplasmic reticulum lumen","x":"-52.31037669751585","y":"-158.61480526049414"},{"id":"endoplasmic reticulum membrane","x":"40.22865269070155","y":"-242.8655434966252"},{"id":"peroxisomal matrix","x":"-10.388660648100993","y":"-283.38931320666546"}]

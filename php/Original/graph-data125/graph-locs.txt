@@ -1,0 +1,1 @@
+[{"id":"endoplasmic reticulum lumen","x":"16.312377377213465","y":"-254.61373126370245"},{"id":"endoplasmic reticulum membrane","x":"272.08075351932627","y":"43.33566775098832"}]

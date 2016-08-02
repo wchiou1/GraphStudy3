@@ -1,0 +1,432 @@
+[
+  {
+    "id": "Precentral_L",
+    "x": 38,
+    "y": -6,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Precentral_R",
+    "x": -42,
+    "y": -10,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Frontal_Sup_L",
+    "x": 18,
+    "y": 34,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Frontal_Sup_R",
+    "x": -22,
+    "y": 30,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Frontal_Mid_L",
+    "x": 34,
+    "y": 32,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Frontal_Mid_R",
+    "x": -38,
+    "y": 32,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Frontal_Mid_Orb_L",
+    "x": 30,
+    "y": 50,
+    "graphs": ["1"]
+  },
+  {
+    "id": "Frontal_Inf_Oper_L",
+    "x": 48,
+    "y": 12,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Frontal_Inf_Oper_R",
+    "x": -50,
+    "y": 14,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Frontal_Inf_Orb_L",
+    "x": 36,
+    "y": 30,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Rolandic_Oper_L",
+    "x": 48,
+    "y": -10,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Rolandic_Oper_R",
+    "x": -52,
+    "y": -8,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Supp_Motor_Area_L",
+    "x": 6,
+    "y": 4,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Supp_Motor_Area_R",
+    "x": -8,
+    "y": -2,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Frontal_Sup_Medial_L",
+    "x": 6,
+    "y": 48,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Frontal_Sup_Medial_R",
+    "x": -8,
+    "y": 50,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Insula_L",
+    "x": 36,
+    "y": 6,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Insula_R",
+    "x": -38,
+    "y": 6,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Cingulum_Ant_L",
+    "x": 4,
+    "y": 34,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Cingulum_Ant_R",
+    "x": -8,
+    "y": 36,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Cingulum_Mid_L",
+    "x": 6,
+    "y": -16,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Cingulum_Mid_R",
+    "x": -8,
+    "y": -10,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Cingulum_Post_L",
+    "x": 6,
+    "y": -44,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Cingulum_Post_R",
+    "x": -8,
+    "y": -44,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Calcarine_L",
+    "x": 8,
+    "y": -80,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Calcarine_R",
+    "x": -16,
+    "y": -74,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Cuneus_L",
+    "x": 6,
+    "y": -82,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Cuneus_R",
+    "x": -14,
+    "y": -80,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Lingual_L",
+    "x": 14,
+    "y": -68,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Lingual_R",
+    "x": -16,
+    "y": -68,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Occipital_Sup_L",
+    "x": 16,
+    "y": -86,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Occipital_Sup_R",
+    "x": -24,
+    "y": -82,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Occipital_Mid_L",
+    "x": 32,
+    "y": -82,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Occipital_Mid_R",
+    "x": -38,
+    "y": -80,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Occipital_Inf_L",
+    "x": 36,
+    "y": -80,
+    "graphs": ["1"]
+  },
+  {
+    "id": "Occipital_Inf_R",
+    "x": -38,
+    "y": -84,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Fusiform_L",
+    "x": 32,
+    "y": -42,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Fusiform_R",
+    "x": -34,
+    "y": -40,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Postcentral_L",
+    "x": 42,
+    "y": -24,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Postcentral_R",
+    "x": -42,
+    "y": -26,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Parietal_Sup_L",
+    "x": 24,
+    "y": -60,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Parietal_Sup_R",
+    "x": -26,
+    "y": -60,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Parietal_Inf_L",
+    "x": 44,
+    "y": -48,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Parietal_Inf_R",
+    "x": -46,
+    "y": -48,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "SupraMarginal_L",
+    "x": 56,
+    "y": -34,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "SupraMarginal_R",
+    "x": -58,
+    "y": -32,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Angular_L",
+    "x": 44,
+    "y": -62,
+    "graphs": ["1"]
+  },
+  {
+    "id": "Precuneus_L",
+    "x": 8,
+    "y": -58,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Precuneus_R",
+    "x": -10,
+    "y": -58,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Subcortical_1",
+    "x": 12,
+    "y": 10,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Subcortical_2",
+    "x": -14,
+    "y": 10,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Subcortical_3",
+    "x": 24,
+    "y": 2,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Subcortical_4",
+    "x": -28,
+    "y": 4,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Subcortical_5",
+    "x": 18,
+    "y": -2,
+    "graphs": ["1"]
+  },
+  {
+    "id": "Subcortical_6",
+    "x": -20,
+    "y": -2,
+    "graphs": ["1","2"]
+
+  },
+ 
+  {
+    "id": "Subcortical_7",
+    "x": -12,
+    "y": -18,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Heschl_L",
+    "x": 42,
+    "y": -20,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Heschl_R",
+    "x": -46,
+    "y": -18,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Temporal_Sup_L",
+    "x": 54,
+    "y": -22,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Temporal_Sup_R",
+    "x": -58,
+    "y": -24,
+    "graphs": ["1","2"]
+
+  },
+  {
+    "id": "Temporal_Mid_L",
+    "x": 56,
+    "y": -34,
+    "graphs": ["1"]
+  },
+  {
+    "id": "Temporal_Mid_R",
+    "x": -58,
+    "y": -38,
+    "graphs": ["1","2"]
+
+  }
+]

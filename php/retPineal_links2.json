@@ -1,0 +1,102 @@
+[
+  {
+    "source": "PAX6",
+    "target": "VSX2"
+  },
+  {
+    "source": "PAX6",
+    "target": "VSX2"
+  },
+  {
+    "source": "LHX3",
+    "target": "LHX9"
+  },
+  {
+    "source": "LHX9",
+    "target": "ISL1"
+  },
+  {
+    "source": "PAX6",
+    "target": "VSX2"
+  },
+  {
+    "source": "MAFA",
+    "target": "NEUROD1"
+  },
+  {
+    "source": "MSX1",
+    "target": "LHX9"
+  },
+  {
+    "source": "LHX3",
+    "target": "RHOXF1"
+  },
+  {
+    "source": "LHX9",
+    "target": "MSX2"
+  },
+  {
+    "source": "PAX6",
+    "target": "RAX"
+  },
+  {
+    "source": "PAX6",
+    "target": "LHX2"
+  },
+  {
+    "source": "LHX3",
+    "target": "RAX"
+  },
+  {
+    "source": "LHX3",
+    "target": "ALX4"
+  },
+  {
+    "source": "LHX2",
+    "target": "LHX3"
+  },
+  {
+    "source": "MSX1",
+    "target": "LHX2"
+  },
+  {
+    "source": "LHX2",
+    "target": "ISL1"
+  },
+  {
+    "source": "LHX3",
+    "target": "ISL1"
+  },
+  {
+    "source": "LHX3",
+    "target": "LMX1B"
+  },
+  {
+    "source": "LHX3",
+    "target": "DMBX1"
+  },
+  {
+    "source": "DMBX1",
+    "target": "OTX2"
+  },
+  {
+    "source": "MSX1",
+    "target": "MSX2"
+  },
+  {
+    "source": "LHX2",
+    "target": "MSX2"
+  },
+  {
+    "source": "ALX4",
+    "target": "ALX1"
+  },
+  {
+    "source": "LHX3",
+    "target": "ALX1"
+  },
+  {
+    "source": "PAX3",
+    "target": "MSX1"
+  }
+]

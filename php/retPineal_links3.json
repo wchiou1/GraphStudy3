@@ -1,0 +1,127 @@
+[
+  {
+    "source": "PAX6",
+    "target": "VSX2",
+    "log2": -4.148100646
+  },
+  {
+    "source": "PAX6",
+    "target": "VSX2",
+    "log2": -4.106863246
+  },
+  {
+    "source": "LHX3",
+    "target": "LHX9",
+    "log2": -3.628642635
+  },
+  {
+    "source": "LHX9",
+    "target": "ISL1",
+    "log2": -3.579512976
+  },
+  {
+    "source": "PAX6",
+    "target": "VSX2",
+    "log2": -3.487793619
+  },
+  {
+    "source": "MAFA",
+    "target": "NEUROD1",
+    "log2": -3.266909966
+  },
+  {
+    "source": "MSX1",
+    "target": "LHX9",
+    "log2": -2.775125853
+  },
+  {
+    "source": "LHX3",
+    "target": "RHOXF1",
+    "log2": -1.424774385
+  },
+  {
+    "source": "LHX9",
+    "target": "MSX2",
+    "log2": -1.356853405
+  },
+  {
+    "source": "PAX6",
+    "target": "RAX",
+    "log2": -1.092859972
+  },
+  {
+    "source": "PAX6",
+    "target": "LHX2",
+    "log2": -0.423390708
+  },
+  {
+    "source": "LHX3",
+    "target": "RAX",
+    "log2": -0.252537215
+  },
+  {
+    "source": "LHX3",
+    "target": "ALX4",
+    "log2": 0.535711138
+  },
+  {
+    "source": "LHX2",
+    "target": "LHX3",
+    "log2": 0.785898563
+  },
+  {
+    "source": "MSX1",
+    "target": "LHX2",
+    "log2": 0.892438713
+  },
+  {
+    "source": "LHX2",
+    "target": "ISL1",
+    "log2": 1.071707743
+  },
+  {
+    "source": "LHX3",
+    "target": "ISL1",
+    "log2": 1.682688421
+  },
+  {
+    "source": "LHX3",
+    "target": "LMX1B",
+    "log2": 2.057800016
+  },
+  {
+    "source": "LHX3",
+    "target": "DMBX1",
+    "log2": 2.082038957
+  },
+  {
+    "source": "DMBX1",
+    "target": "OTX2",
+    "log2": 2.106649032
+  },
+  {
+    "source": "MSX1",
+    "target": "MSX2",
+    "log2": 2.306815053
+  },
+  {
+    "source": "LHX2",
+    "target": "MSX2",
+    "log2": 2.446975287
+  },
+  {
+    "source": "ALX4",
+    "target": "ALX1",
+    "log2": 3.169163115
+  },
+  {
+    "source": "LHX3",
+    "target": "ALX1",
+    "log2": 3.897317352
+  },
+  {
+    "source": "PAX3",
+    "target": "MSX1",
+    "log2": 4.27086306
+  }
+]

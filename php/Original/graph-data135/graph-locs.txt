@@ -1,0 +1,1 @@
+[{"id":"cytosol","x":"-220.89330711540683","y":"120.93259719672275"},{"id":"extracellular region","x":"-340.35602756542414","y":"-13.135802894869766"},{"id":"plasma membrane","x":"-91.36428082522072","y":"-356.272626115874"},{"id":"clathrin-sculpted acetylcholine transport vesicle lumen","x":"-182.42456476174527","y":"290.8350352505428"}]

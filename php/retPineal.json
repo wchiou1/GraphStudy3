@@ -1,0 +1,142 @@
+[
+  {
+    "location": "Pineal",
+    "id": "ALX1",
+    "g1": 0.870769733,
+    "g2": 0.057522425,
+    "graphs": ["1"]
+  },
+  {
+    "location": "Pineal",
+    "id": "ALX4",
+    "g1": 1.07198816,
+    "g2": 0.748007808,
+    "graphs": ["1"]
+  },
+  {
+    "location": "Retina_Pineal",
+    "id": "DMBX1",
+    "g1": 2.117871667,
+    "g2": 0.489394583,
+    "graphs": ["1","2"]
+  },
+  {
+    "location": "Retina_Pineal",
+    "id": "ISL1",
+    "g1": 110.2202287,
+    "g2": 19.46843925,
+    "graphs": ["1","2"]
+  },
+  {
+    "location": "Pineal",
+    "id": "LBX3",
+    "g1": 3.607232333,
+    "g2": 0.044147558,
+    "graphs": ["1"]
+  },
+  {
+    "location": "Retina_Pineal",
+    "id": "LHX2",
+    "g1": 16.608194,
+    "g2": 10.60848,
+    "graphs": ["1","2"]
+  },
+  {
+    "location": "Retina_Pineal",
+    "id": "LHX3",
+    "g1": 46.74811612,
+    "g2": 21.5368725,
+    "graphs": ["1","2"]
+  },
+  {
+    "location": "Retina",
+    "id": "LHX9",
+    "g1": 0.474383913,
+    "g2": 7.95386875,
+    "graphs": ["2"]
+  },
+  {
+    "location": "Pineal",
+    "id": "LMX1B",
+    "g1": 3.471541273,
+    "g2": 0.8051812,
+    "graphs": ["1"]
+  },
+  {
+    "location": "Retina",
+    "id": "MAFA",
+    "g1": 1.154847467,
+    "g2": 14.7824075,
+    "graphs": ["2"]
+  },
+  {
+    "location": "Pineal",
+    "id": "MSX1",
+    "g1": 10.38301157,
+    "g2": 5.09449985,
+    "graphs": ["1"]
+  },
+  {
+    "location": "Pineal",
+    "id": "MSX2",
+    "g1": 10.92761953,
+    "g2": 1.364190325,
+    "graphs": ["1"]
+  },
+  {
+    "location": "Retina_Pineal",
+    "id": "NEUROD1",
+    "g1": 20.16547933,
+    "g2": 36.41491195,
+    "graphs": ["1","2"]
+  },
+  {
+    "location": "Retina_Pineal",
+    "id": "OTX2",
+    "g1": 190.161656,
+    "g2": 77.49100833,
+    "graphs": ["1","2"]
+  },
+  {
+    "location": "Pineal",
+    "id": "PAX3",
+    "g1": 18.63638187,
+    "g2": 0.370535792,
+    "graphs": ["1"]
+  },
+  {
+    "location": "Retina_Pineal",
+    "id": "PAX6",
+    "g1": 13.44900267,
+    "g2": 164.533975,
+    "graphs": ["1","2"]
+  },
+  {
+    "location": "Retina_Pineal",
+    "id": "RAX",
+    "g1": 6.472253033,
+    "g2": 9.879547492,
+    "graphs": ["1","2"]
+  },
+  {
+    "location": "Pineal",
+    "id": "RHOXF1",
+    "g1": 0.50749476,
+    "g2": 1.4378365,
+    "graphs": ["1"]
+  },
+  {
+    "location": "Pineal",
+    "id": "SPIC",
+    "g1": 2.029705047,
+    "g2": 0.068666017,
+    "graphs": ["1"]
+  },
+  {
+    "location": "Retina",
+    "id": "VSX2",
+    "g1": 3.53485176,
+    "g2": 71.06260833,
+    "graphs": ["2"]
+  }
+]

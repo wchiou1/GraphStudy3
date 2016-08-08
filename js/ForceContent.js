@@ -148,6 +148,7 @@
 				return pathway.color || pathway.strokeStyle || null;},
 
 			renewDisplay: function() {
+				console.log("ForceContent renewdisplay");
 				if ('split' === this.mode) {this.layoutSplit();}
 				else if ('soup' === this.mode) {this.layoutSoup();}
 			},

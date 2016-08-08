@@ -95,6 +95,7 @@
 			 */
 			draw: function() {
 				if (!this.needsRedraw) {return;}
+				console.log("Canvas draw");
 				this.clear();
 				this.scene.draw(this.context, this.scale, {
 					noTitle: true, noButtons: true, sharpCorners: true, fillWithStroke: true,
@@ -128,6 +129,7 @@
 			 * Sets the entire window to use this canvas's mousemove function.
 			 */
 			useMousemoveGlobally: function() {
+				console.log("Canvas mouse move global");
 				var canvas = this;
 				$P.state.setGlobalMousemove(function(event) {
 					var mouse = canvas.getMouseLocation(event);

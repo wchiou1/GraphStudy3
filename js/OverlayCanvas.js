@@ -9,6 +9,7 @@ $P.OverlayCanvas = $P.defineClass(
 	{
 		draw: function() {
 			if (!this.needsRedraw) {return;}
+			console.log("OverlayCanvas draw");
 			this.clear();
 			this.context.save();
 			this.context.translate(-$P.state.scrollX, 0);

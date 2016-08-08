@@ -1,3 +1,5 @@
+//This draws the whole window including instructions from the looks of it
+
 (function($P){
 	'use strict';
 
@@ -36,6 +38,7 @@
 			 * @param {Object} args - additional arguments to pass to children
 			 */
 			draw: function(context, scale, args) {
+				console.log("Scene draw");
 				var i;
 				for (i = this.children.length - 1; i >= 0; --i) {
 					this.children[i].draw(context, scale, args || {});}},

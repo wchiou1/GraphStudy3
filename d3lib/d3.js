@@ -2062,7 +2062,7 @@
       d3_timer_interval = 0;
     } else {
       d3_timer_interval = 1;
-      d3_timer_frame(d3_timer_step);
+      //d3_timer_frame(d3_timer_step);
     }
   }
   d3.timer.flush = function() {

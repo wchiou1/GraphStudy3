@@ -30,6 +30,7 @@
 					$P.Vector2D(this.w, -this.h).angle() + Math.PI * 2];},
 
 			makeZoom: function(layout, view, baseline) {
+				console.log("Parent makeZoom");
 				var self = this, zoom, base;
 				base = d3.behavior.zoom()
 					.scaleExtent([0.1, 10])
@@ -134,6 +135,7 @@
 				},
 
 				makeZoom: function(layout, view, baseline) {
+					console.log("Centered makeZoom");
 					var self = this;
 					zoom = $P.ForceShape.prototype.makeZoom.call(this, layout, view, baseline);
 					if (baseline) {
@@ -191,6 +193,7 @@
 						length: self.w * 0.5};
 				},
 			makeZoom: function(layout, view, baseline) {
+				console.log("Mirror makeZoom");
 				var self = this,
 						flipX = self.flipX(view.index),
 						zoom = $P.ForceShape.prototype.makeZoom.call(this, layout, view, baseline);
@@ -292,6 +295,7 @@
 					angle += this.angle;}
 				return dividers;},
 			makeZoom: function(layout, view, baseline) {
+				console.log("Radial makeZoom");
 				var self = this,
 						zoom = $P.ForceShape.prototype.makeZoom.call(self, layout, view, baseline);
 				zoom.getTranslate = function(base) {

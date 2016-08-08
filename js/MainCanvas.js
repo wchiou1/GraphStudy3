@@ -67,6 +67,7 @@ $P.MainCanvas = $P.defineClass(
 		},
 		draw: function() {
 			if (!this.needsRedraw) {return;}
+			console.log("Maincanvas draw");
 			this.clear();
 			this.context.save();
 			this.context.translate(-$P.state.scrollX, 0);

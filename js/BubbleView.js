@@ -30,6 +30,7 @@
 			this.activations = [];},
 		{
 			setCenterCoordinate: function (x, y, w, h) {
+				console.log("BubbleView SetCenterCoordinate");
 				var oldx = x;
 				var oldy = y;
 				this.w = w;
@@ -47,6 +48,7 @@
 			},
 			// Want to draw children in specific order, so override directly.
 			draw: function (ctx, scale) {
+				console.log("BubbleView draw");
 				ctx.save();
 				//ctx.translate(this.x, this.y);
 				this.childrenClippingShape.doPath(ctx, scale);

@@ -22,7 +22,7 @@
 		window.addEventListener( 'keydown', function(event){
 			if(event.keyCode === 70)
 			{
-				screenfull.request();
+				//screenfull.request();
 			}
 		}, false );
 		// trigger the onchange() to set the initial values
@@ -43,12 +43,12 @@
 			this.mainCanvas.needsRedraw = true;
 			this.overlayCanvas.needsRedraw = true;
 			this.navCanvas.needsRedraw = true;};
-
 		function render() {
-			$P.requestAnimationFrame(render);
-			$P.state.mainCanvas.draw();
-			$P.state.overlayCanvas.draw();
-			$P.state.navCanvas.draw();
+			//console.log("Main render");
+			//$P.requestAnimationFrame(render);
+			//$P.state.mainCanvas.draw();
+			//$P.state.overlayCanvas.draw();
+			//$P.state.navCanvas.draw();
 		}
 
 		render();
@@ -118,9 +118,9 @@
 						result = bubble.receiveEvent(event);
 
 
-						d3.select(this).attr('transform', null);
-							_this.dragging = null;
-							_this.dragOffset = null;
+						//d3.select(this).attr('transform', null);
+						//	_this.dragging = null;
+						//	_this.dragOffset = null;
 
 
 
@@ -176,9 +176,9 @@
 							//setTimeout(trigger, 15000);
 
 						//}
-						d3.select(this).attr('transform', null);
-							_this.dragging = null;
-							_this.dragOffset = null;
+						//d3.select(this).attr('transform', null);
+						//	_this.dragging = null;
+						//	_this.dragOffset = null;
 						}
 					if (key === 'generate2')
 					{
@@ -204,9 +204,9 @@
 						$P.state.scene.add(bubble);
 						result = bubble.receiveEvent(event);
 
-						d3.select(this).attr('transform', null);
-							_this.dragging = null;
-							_this.dragOffset = null;
+						//d3.select(this).attr('transform', null);
+						//	_this.dragging = null;
+						//	_this.dragOffset = null;
 						
 					}
 					if (key === 'generate3') {
@@ -244,9 +244,9 @@
 							//setTimeout(trigger, 15000);
 
 						//}
-						d3.select(this).attr('transform', null);
-							_this.dragging = null;
-							_this.dragOffset = null;
+						//d3.select(this).attr('transform', null);
+						//	_this.dragging = null;
+						//	_this.dragOffset = null;
 						}
 					
 					if (key === 'test') {
@@ -264,9 +264,9 @@
 						$P.state.scene.add(bubble);
 						result = bubble.receiveEvent(event);
 
-						d3.select(this).attr('transform', null);
-							_this.dragging = null;
-							_this.dragOffset = null;
+						//d3.select(this).attr('transform', null);
+						//	_this.dragging = null;
+						//	_this.dragOffset = null;
 						}
 
 					if (key === 'starburst') {
@@ -283,9 +283,9 @@
 						$P.state.scene.add(bubble);
 						result = bubble.receiveEvent(event);
 
-						d3.select(this).attr('transform', null);
-							_this.dragging = null;
-							_this.dragOffset = null;
+						//d3.select(this).attr('transform', null);
+						//	_this.dragging = null;
+						//	_this.dragOffset = null;
 						}
 
 					if (key === 'treering') {
@@ -386,6 +386,6 @@
 					'Toggle_Links': {name: 'Toggle Links'}*/
 					}
 			});}
-		setContextMenu();
+		//setContextMenu();
 	});
 })(PATHBUBBLES);

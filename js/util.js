@@ -143,7 +143,7 @@ $P.getJSON = function(url, callback, params) {
 			if ('timeout' === textStatus) {
 				call();}
 			else {
-				console.error(errorThrown);
+				console.error(errorThrown);console.log(params.data);console.log(jqXHR.responseText);
 				console.error(textStatus);}},
 		timeout: 120000,
 		success: callback};

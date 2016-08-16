@@ -32,16 +32,42 @@
 			makeZoom: function(layout, view, baseline) {
 				console.log("Parent makeZoom");
 				var self = this, zoom, base;
+				var graphMoveLog=[];
+				var moveRecord=function(view,time,transform){
+					this.view=view;
+					this.time=time;
+					this.transform=transform;
+				};
+				var userID;
+				$P.getJSON('./php/get_user_id2.php',
+                       function(jsonData) {
+                       userID = jsonData + 1;
+                         },
+                        { 
+                         type: 'GET',
+                         data: {
+                         }
+                      }
+                     );
 				base = d3.behavior.zoom()
 					.scaleExtent([0.1, 10])
 					.size([self.w, self.h])
 					.on('zoom', function() {
 						self.translate = zoom.translate();
 						//self.scale = zoom.scale();
-						self.zooms.forEach(function(zoom) {
-							zoom.translate(self.translate);
+						self.zooms.forEach(function(zoom,i) {
+							zoom.translate(self.translate); 
 							zoom.scale(self.scale);
-							zoom.view.onZoom();});
+							zoom.view.onZoom();
+							//console.log(zoom.view.shape.transform(zoom.view));
+							//console.log("zoom"+i+": "+zoom.view.translate());
+							//console.log("view:"+i+" time:"+Date.now()+"\n"+zoom.view.element.attr('transform'));
+							//graphMoveLog.push(new moveRecord(i,Date.now(),zoom.view.element.attr('transform')));
+							$.post('./php/track_graph.php',
+									     {"id": userID , "log": i+"\t"+Date.now()+"\t"+zoom.view.element.attr('transform')+"\n"}
+			 				  );     
+			 			    
+							});
 							})
 					.on('zoomstart', function() {
 						self.zooms.forEach(function(zoom) {

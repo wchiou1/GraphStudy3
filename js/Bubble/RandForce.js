@@ -938,8 +938,7 @@
 
 
                 if('addGraph' == event.name) { // && (this.contains(event.x, event.y) || event.ignore_xy)){
-                     self.startT = Date.now();
-                	console.log(self.startT);
+                     
                   if(event.question === 0)
                   {
                      $P.getJSON('./php/get_user_id.php',
@@ -978,6 +977,14 @@
                     	ev.id = self.numGraphs;
                         this.addGraph(ev, i+1);
                     }
+					self.startT = Date.now();
+                	console.log(self.startT);
+					if(window.userID!=null){
+						window.zooms.forEach(function(zoom,i) {
+						$.post('./php/track_graph.php',
+											 {"id": window.userID, "log": window.qID+"\t"+i+"\t"+self.startT+"\t"+zoom.view.element.attr('transform')+"\n"}
+						);});
+					}
                     if(self.contentConfig.generate1 || self.contentConfig.generate2 || self.contentConfig.generate3 )
                     	this.content.layout.force.start();
                     return{ target: this, addLink: {color:this.content.getGraphColor(event)},

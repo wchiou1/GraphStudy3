@@ -105,6 +105,7 @@
 				zoom.setScale = function(base) {return base;};
 				zoom.base = base;
 				this.zooms.push(zoom);
+				window.zooms=this.zooms;
 				return zoom;},
 
 			onTick: function(layout, argument) {},

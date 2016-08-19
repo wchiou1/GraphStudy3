@@ -38,7 +38,8 @@
 					this.time=time;
 					this.transform=transform;
 				};
-				var userID;
+				var userID=window.userID;
+				var qID=window.qID;/*
 				$P.getJSON('./php/get_user_id2.php',
                        function(jsonData) {
                        userID = jsonData + 1;
@@ -48,7 +49,7 @@
                          data: {
                          }
                       }
-                     );
+                     );*/
 				base = d3.behavior.zoom()
 					.scaleExtent([0.1, 10])
 					.size([self.w, self.h])
@@ -60,11 +61,10 @@
 							zoom.scale(self.scale);
 							zoom.view.onZoom();
 							//console.log(zoom.view.shape.transform(zoom.view));
-							//console.log("zoom"+i+": "+zoom.view.translate());
 							//console.log("view:"+i+" time:"+Date.now()+"\n"+zoom.view.element.attr('transform'));
 							//graphMoveLog.push(new moveRecord(i,Date.now(),zoom.view.element.attr('transform')));
 							$.post('./php/track_graph.php',
-									     {"id": userID , "log": i+"\t"+Date.now()+"\t"+zoom.view.element.attr('transform')+"\n"}
+									     {"id": userID, "log": qID+"\t"+i+"\t"+Date.now()+"\t"+zoom.view.element.attr('transform')+"\n"}
 			 				  );     
 			 			    
 							});
@@ -74,7 +74,7 @@
 							zoom.view.onZoomStart();});
 						})
 					.on('zoomend', function() {
-						self.zooms.forEach(function(zoom) {
+						self.zooms.forEach(function(zoom) {console.log("zoooom end");
 							zoom.view.onZoomEnd();});
 					});
 				zoom = d3.rebind(

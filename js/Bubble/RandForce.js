@@ -945,6 +945,7 @@
                      $P.getJSON('./php/get_user_id.php',
                        function(jsonData) {
                        self.userID = jsonData + 1;
+					   window.userID=self.userID;
                          },
                         { 
                          type: 'GET',

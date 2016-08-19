@@ -671,6 +671,7 @@
         	},
         	loadRandData: function(id, parentFolder, anonymize) {
         		var self = this;
+				window.qID=id;
         		function genAlphabet()
 				{
 					var ascii = '';

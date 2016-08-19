@@ -44,11 +44,11 @@
 			this.overlayCanvas.needsRedraw = true;
 			this.navCanvas.needsRedraw = true;};
 		function render() {
-			//console.log("Main render");
+			console.log("Main render");
 			//$P.requestAnimationFrame(render);
-			//$P.state.mainCanvas.draw();
-			//$P.state.overlayCanvas.draw();
-			//$P.state.navCanvas.draw();
+			$P.state.mainCanvas.draw();
+			$P.state.overlayCanvas.draw();
+			$P.state.navCanvas.draw();
 		}
 
 		render();

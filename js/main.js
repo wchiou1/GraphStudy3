@@ -70,6 +70,7 @@
 						$P.state.scene.add(bubble);
 						result = bubble.receiveEvent(event);
 		render();
+
 /*
 		$P.state.scene.add(new $P.TreeRing({
 			x: 50, y: 50, w: 840, h: 700,

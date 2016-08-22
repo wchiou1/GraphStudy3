@@ -1,0 +1,1 @@
+0	1471901554826	translate(512.75,497)scale(1,1)translate(0,0)scale(1)	translate(1538.25,497)scale(1,1)translate(0,0)scale(1)

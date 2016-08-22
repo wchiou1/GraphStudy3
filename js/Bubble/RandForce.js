@@ -952,6 +952,19 @@
                          }
                       }
                      );
+					(function(){
+						var graphElement=$P.state.scene.htmlObjects[0].element;
+						var graphStyle=window.getComputedStyle(graphElement);
+						var childStyle=window.getComputedStyle(graphElement.children[0]);
+						var graphTop=graphStyle.getPropertyValue("top");
+						var graphLeft=graphStyle.getPropertyValue("left");
+						var graphWidth=childStyle.getPropertyValue("width");
+						var graphHeight=childStyle.getPropertyValue("height");
+						//console.log(graphLeft+"\t"+graphTop+"\t"+graphWidth+"\t"+graphHeight);
+						$.post('./php/track_graph.php',
+							{"id": window.userID, "log": graphLeft+"\t"+graphTop+"\t"+graphWidth+"\t"+graphHeight+"\n"}
+						);
+					})();
                   }
                 	var latin_selector = self.qCount%9;
 

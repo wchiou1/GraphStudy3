@@ -1,0 +1,2 @@
+undefined	undefined	[object SVGAnimatedLength]	[object SVGAnimatedLength]
+0	1471900921040	translate(1025.5,497)scale(1, 1)scale(1,1)translate(-512.75, 0)translate(0,0)scale(1)	translate(1025.5,497)scale(-1, 1)scale(1,1)translate(-512.75, 0)translate(0,0)scale(1)

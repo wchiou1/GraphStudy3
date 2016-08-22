@@ -1880,6 +1880,10 @@
 					if(!time_limited) ql++;
 					if (ql > numTrials)   // the user just answered the last question
 					{
+
+						$.post('./php/track_graph.php',
+											 {"id": window.userID, "log": window.qID+"\t"+"null"+"\t"+Date.now()+"\t"+"finished"+"\n"}
+						);
 						// submit answers
 						if(qType === 102 || qType === 2 || qType === 104 || qType === 4)
 		  					answerToRecord = content.parent.getNodeSelection();
@@ -1912,6 +1916,10 @@
 					else {
 							if(time_limited)
 							{
+								//window.graphHidden=true;
+								$.post('./php/track_graph.php',
+											 {"id": window.userID, "log": window.qID+"\t"+"null"+"\t"+Date.now()+"\t"+"graph_hidden"+"\n"}
+								);
 								content.override_timeout = true;
 								content.parent.setEndT();
 								conceal.remove();
@@ -1970,6 +1978,9 @@
 
 						if(ql === 37 && content.parent.getTransition())
 							{
+									$.post('./php/track_graph.php',
+											 {"id": window.userID, "log": window.qID+"\t"+"null"+"\t"+Date.now()+"\t"+"graph_hidden"+"\n"}
+									);
 								ql--;
 								content.parent.resetTransition();
 								content.hideGraph('Click Start when ready', 'Task 2: Estimate the number of node differences between the two graphs');

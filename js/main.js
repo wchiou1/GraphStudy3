@@ -51,7 +51,7 @@
 			$P.state.navCanvas.draw();
 		}
 
-		render();
+		
 		var bubble, state, objects, qbubble;
 		var result, event;
 		var bwidth = canvas.width-40;
@@ -69,7 +69,7 @@
 						globalBubble = bubble;
 						$P.state.scene.add(bubble);
 						result = bubble.receiveEvent(event);
-
+		render();
 /*
 		$P.state.scene.add(new $P.TreeRing({
 			x: 50, y: 50, w: 840, h: 700,

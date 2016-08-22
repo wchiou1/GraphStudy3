@@ -1882,7 +1882,7 @@
 					{
 
 						$.post('./php/track_graph.php',
-											 {"id": window.userID, "log": window.qID+"\t"+"null"+"\t"+Date.now()+"\t"+"finished"+"\n"}
+											 {"id": window.userID, "log": window.qID+"\t"+Date.now()+"\t"+"finished"+"\n"}
 						);
 						// submit answers
 						if(qType === 102 || qType === 2 || qType === 104 || qType === 4)
@@ -1918,7 +1918,7 @@
 							{
 								//window.graphHidden=true;
 								$.post('./php/track_graph.php',
-											 {"id": window.userID, "log": window.qID+"\t"+"null"+"\t"+Date.now()+"\t"+"graph_hidden"+"\n"}
+											 {"id": window.userID, "log": window.qID+"\t"+Date.now()+"\t"+"graph_hidden"+"\n"}
 								);
 								content.override_timeout = true;
 								content.parent.setEndT();
@@ -1979,7 +1979,7 @@
 						if(ql === 37 && content.parent.getTransition())
 							{
 									$.post('./php/track_graph.php',
-											 {"id": window.userID, "log": window.qID+"\t"+"null"+"\t"+Date.now()+"\t"+"graph_hidden"+"\n"}
+											 {"id": window.userID, "log": window.qID+"\t"+Date.now()+"\t"+"graph_hidden"+"\n"}
 									);
 								ql--;
 								content.parent.resetTransition();

@@ -980,10 +980,13 @@
 					self.startT = Date.now();
                 	console.log(self.startT);
 					if(window.userID!=null){
+						var transforms="";
 						window.zooms.forEach(function(zoom,i) {
+							transforms+="\t"+zoom.view.element.attr('transform');
+						});
 						$.post('./php/track_graph.php',
-											 {"id": window.userID, "log": window.qID+"\t"+i+"\t"+self.startT+"\t"+zoom.view.element.attr('transform')+"\n"}
-						);});
+											 {"id": window.userID, "log": window.qID+"\t"+self.startT+transforms+"\n"}
+						);
 					}
                     if(self.contentConfig.generate1 || self.contentConfig.generate2 || self.contentConfig.generate3 )
                     	this.content.layout.force.start();

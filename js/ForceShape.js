@@ -56,6 +56,7 @@
 					.on('zoom', function() {
 						self.translate = zoom.translate();
 						//self.scale = zoom.scale();
+						var transforms="";
 						self.zooms.forEach(function(zoom,i) {
 							zoom.translate(self.translate); 
 							zoom.scale(self.scale);
@@ -63,11 +64,11 @@
 							//console.log(zoom.view.shape.transform(zoom.view));
 							//console.log("view:"+i+" time:"+Date.now()+"\n"+zoom.view.element.attr('transform'));
 							//graphMoveLog.push(new moveRecord(i,Date.now(),zoom.view.element.attr('transform')));
-							$.post('./php/track_graph.php',
-									     {"id": userID, "log": qID+"\t"+i+"\t"+Date.now()+"\t"+zoom.view.element.attr('transform')+"\n"}
-			 				  );     
-			 			    
+							transforms+="\t"+zoom.view.element.attr('transform');
 							});
+							$.post('./php/track_graph.php',
+									     {"id": userID, "log": qID+"\t"+Date.now()+transforms+"\n"}
+			 				  );  
 							})
 					.on('zoomstart', function() {
 						self.zooms.forEach(function(zoom) {

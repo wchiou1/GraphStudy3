@@ -960,9 +960,14 @@
 						var graphLeft=graphStyle.getPropertyValue("left");
 						var graphWidth=childStyle.getPropertyValue("width");
 						var graphHeight=childStyle.getPropertyValue("height");
+						var w=window,d=document,e=d.documentElement,g=d.body;
+						var x=w.innerWidth||e.clientWidth||g.clientWidth;
+						var y=w.innerHeight||e.clientHeight||g.clientHeight;
+
+
 						//console.log(graphLeft+"\t"+graphTop+"\t"+graphWidth+"\t"+graphHeight);
 						$.post('./php/track_graph.php',
-							{"id": window.userID, "log": graphLeft+"\t"+graphTop+"\t"+graphWidth+"\t"+graphHeight+"\n"}
+							{"id": window.userID, "log": graphLeft+"\t"+graphTop+"\t"+graphWidth+"\t"+graphHeight+"\t"+x+"\t"+y+"\n"}
 						);
 					})();
                   }

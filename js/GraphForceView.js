@@ -1074,12 +1074,12 @@
 	$P.GraphForceView.makeLegend = function(content, parentSelection, width, height, viewID, timeoutEvent) {
 			var answerReady = content.parent.getAnswerReady();
 	//  Question pool:
-		var practice_questions = [ ' For the subnetwork containing the most nodes, mark the nodes that are missing in one graph but not the other. ',  // soup
-								   ' For the subnetwork containing the most nodes, mark the nodes that are missing in one graph but not the other.',  // soup
-								   ' For the subnetwork containing the most nodes, mark the nodes that are missing in one graph but not the other.',  // sm
-								   ' For the subnetwork containing the most nodes, mark the nodes that are missing in one graph but not the other.',  // sm
-								   ' For the subnetwork containing the most nodes, mark the nodes that are missing in one graph but not the other.',  // mirror
-								   ' For the subnetwork containing the most nodes, mark the nodes that are missing in one graph but not the other.',  // mirror
+		var practice_questions = [ ' For the subnetwork containing the most nodes,\n mark the nodes that are missing in one graph but not the other. ',  // soup
+								   ' For the subnetwork containing the most nodes,\n  mark the nodes that are missing in one graph but not the other.',  // soup
+								   ' For the subnetwork containing the most nodes,\n mark the nodes that are missing in one graph but not the other.',  // sm
+								   ' For the subnetwork containing the most nodes,\n mark the nodes that are missing in one graph but not the other.',  // sm
+								   ' For the subnetwork containing the most nodes,\n mark the nodes that are missing in one graph but not the other.',  // mirror
+								   ' For the subnetwork containing the most nodes,\n mark the nodes that are missing in one graph but not the other.',  // mirror
 								  // ' Which graph does not contain node "X"?',  // mirror
 									/*
 								   ' Which node(s) exist in one graph but not the other? ',   // soup
@@ -1100,7 +1100,7 @@
 								  // ' Which of the group "X" nodes is/are connected to 4 or more nodes in all graphs?',  // mirror
 									];
 
-		var questions = ['For the subnetwork containing the most nodes, mark the nodes that are missing in one graph but not the other. ',  // soup - small data (20 nodes) 0
+		var questions = ['For the subnetwork containing the most nodes,\n mark the nodes that are missing in one graph but not the other. ',  // soup - small data (20 nodes) 0
 						 //'Mark all the node(s) that exist in one graph but not the other. ',   // soup  9  --> 18
 						 'Estimate the number of node differences between the two graphs.'
 						 ];
@@ -1722,7 +1722,7 @@
 
 			}
 			if(qType === 200)
-			    content.hideGraph('Click \'Start\' when ready', 'Task 1:  For the subnetwork containing the most nodes, mark the nodes that are missing in one graph but not the other.');
+			    content.hideGraph('Click \'Start\' when ready', 'Task 1:  For the subnetwork containing the most nodes, \n mark the nodes that are missing in one graph but not the other.');
 		///////////////////////////////////////////////////////////////////////////////////////////
 
 		// Create Button "Next Question"
@@ -1753,7 +1753,7 @@
 		  				
 		  					//curQ = displayPractice(0);
 		  					qType = content.parent.getQtype();
-				  			titleScreen(parentSelection, '', titleW, titleH, 'Task 1: For the subnetwork containing the most nodes, mark the nodes that are missing in one graph but not the other.', 'Start', 101, content.parent, []); // ['Please make sure to select the graph in which node X is missing', 'Click the "Begin Practice" button when ready']);
+				  			titleScreen(parentSelection, '', titleW, titleH, 'Task 1: For the subnetwork containing the most nodes, \n sadfas mark the nodes that are missing in one graph but not the other.', 'Start', 101, content.parent, []); // ['Please make sure to select the graph in which node X is missing', 'Click the "Begin Practice" button when ready']);
 							but_state = false; 
 							but_color = 'red';
 							but_rect.attr('stroke', but_color);
@@ -1880,10 +1880,6 @@
 					if(!time_limited) ql++;
 					if (ql > numTrials)   // the user just answered the last question
 					{
-
-						$.post('./php/track_graph.php',
-											 {"id": window.userID, "log": window.qID+"\t"+Date.now()+"\t"+"finished"+"\n"}
-						);
 						// submit answers
 						if(qType === 102 || qType === 2 || qType === 104 || qType === 4)
 		  					answerToRecord = content.parent.getNodeSelection();
@@ -1916,10 +1912,6 @@
 					else {
 							if(time_limited)
 							{
-								//window.graphHidden=true;
-								$.post('./php/track_graph.php',
-											 {"id": window.userID, "log": window.qID+"\t"+Date.now()+"\t"+"graph_hidden"+"\n"}
-								);
 								content.override_timeout = true;
 								content.parent.setEndT();
 								conceal.remove();
@@ -1978,9 +1970,6 @@
 
 						if(ql === 37 && content.parent.getTransition())
 							{
-									$.post('./php/track_graph.php',
-											 {"id": window.userID, "log": window.qID+"\t"+Date.now()+"\t"+"graph_hidden"+"\n"}
-									);
 								ql--;
 								content.parent.resetTransition();
 								content.hideGraph('Click Start when ready', 'Task 2: Estimate the number of node differences between the two graphs');

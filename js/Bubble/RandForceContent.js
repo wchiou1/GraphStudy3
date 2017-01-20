@@ -1284,15 +1284,26 @@
 					var qi = self.parent.getQid();
 					if(qi < 34 || qi === 200) x = 220;
 					else x = 440;
+					var strings = task.split('\n');
 					self.svg.append('text')
-							.style('font-size', '26px')
-							.style('font-weight', 'bold')
-							.style('font-decoration', 'underline')
-							.attr('fill', 'black')
-							.attr('x', x)
-							.attr('y', 200)
-							.attr('dominant-baseline', 'middle')
-							.text(task);
+						.style('font-size', '26px')
+ 						.style('font-weight', 'bold')
+ 						.style('font-decoration', 'underline')
+ 						.attr('fill', 'black')
+ 						.attr('x', self.w/2 - strings[0].length*6.5)
+ 						.attr('y', 200)
+ 						.attr('dominant-baseline', 'middle')
+ 						.text(strings[0]);
+ 							
+					self.svg.append('text')
+ 						.style('font-size', '26px')
+ 						.style('font-weight', 'bold')
+ 						.style('font-decoration', 'underline')
+ 						.attr('fill', 'black')
+ 						.attr('x', self.w/2 - strings[1].length*6.5)
+ 						.attr('y', 200+25)
+ 						.attr('dominant-baseline', 'middle')
+ 						.text(strings[1]);
 
 					}
 			},

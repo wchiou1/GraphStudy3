@@ -581,35 +581,67 @@
 
 			highlight: function(d, answer, give) {
 				var self = this;
-			
-				//self.highlights = self.layout.getAdjacentNodes(d, 0);
 				var allHighlights = self.parentBubble.getNodeSelection();
 				for(var k in allHighlights)
-				//for(var k in self.highlights)
 				{
-					if(!self.highlights[k])
+					if(!self.highlights[k]){
 						self.highlights[k] = self.index;
+					}
 				}
+				//If there is an answer
+				if(answer){
+					//If it's highlighted and it's not an answer...
+					if ((d.layoutId in self.highlights) && !(d.layoutId in answer) )
+					{
+						delete self.highlights[d.layoutId];
+						self.parentBubble.deleteNodeSelection(d.layoutId);
+					}
+					else{
+						//If it's not highlighted then it's not on this list... must be an answer
+						self.highlights[d.layoutId] = 1;
+					}
+					self.parentBubble.setNodeSelection(self.highlights);
 
-				if(d.layoutId in self.lowlights){
-					delete self.lowlights[d.layoutId];
+					self.updateNodes(self.nodes);
 				}
-				else if( ((d.layoutId in self.highlights) && !answer) ) {
-					delete self.highlights[d.layoutId];
-					self.parentBubble.deleteNodeSelection(d.layoutId);
-				}
-				else if ((d.layoutId in self.highlights) && !(d.layoutId in answer) )
-				{
-					self.lowlights[d.layoutId] = 1; 
-					delete self.highlights[d.layoutId];
-					self.parentBubble.deleteNodeSelection(d.layoutId);
-				}
-				else
-					self.highlights[d.layoutId] = 1;
+				else{
+					var selection = self.nodes;
+					var highlightCount = 0;
+					//Get the highlight count first
+					selection.each(function(dd, i) {
+						if (!dd) {return;}
+						if (dd.layoutId != d.layoutId) {return;}
 
-				self.parentBubble.setNodeSelection(self.highlights);
+						var selection = d3.select(this);
+						if ('entity' === dd.klass || 'reaction' === dd.klass) {
+							if (dd.displays) {
+								dd.displays.forEach(function(display) {
+									if((!isNaN(display.highlighted)&&display.viewID !== self.index)||(isNaN(display.highlighted)&&display.viewID === self.index)){
+										highlightCount = highlightCount + 1;
+									}
+									});
+								}
+							}
+					});
+					//If there are any nodes active, switch it on
+					if(highlightCount>0){
+						//switch it on
+						self.highlights[d.layoutId] = 1;
+					}
+					else{//All nodes inactive, turn it off
+						if( d.layoutId in self.highlights ) {
+							//If it's highlighted, switch it off
+							delete self.highlights[d.layoutId];
+							self.parentBubble.deleteNodeSelection(d.layoutId);
+						}
+					}
+					self.parentBubble.setNodeSelection(self.highlights);
 
-				self.updateNodes(self.nodes);
+					self.updateSingleNode(self.nodes,d.layoutId);
+				}
+				
+				
+				
 				//self.updateLinks2(self.links, d);
 				//self.layout.updateDisplay();
 			},
@@ -832,6 +864,39 @@
 
 					if ('location' === d.klass) {
 						selection.attr('stroke-width', self.display.collapsedLocations[d.id] ? 5 : 1);}});
+
+			},
+			
+			updateSingleNode: function(selection,id) {
+				var self = this;
+
+				selection.style('display', function(d, i) {
+					return self.isNodeVisible(d, this) ? '' : 'none';});
+
+				selection.each(function(d, i) {
+					if (!d) {return;}
+					if (d.layoutId != id) {return;}
+
+					var selection = d3.select(this);
+					if ('entity' === d.klass || 'reaction' === d.klass) {
+						var highlights = self.highlights[d.layoutId];
+						d.highlighted = highlights + 1;
+						if (d.displays) {
+							d.displays.forEach(function(display) {
+								if(display.viewID === self.index){
+									if(isNaN(display.highlighted))
+										display.highlighted = 2;
+									else
+										display.highlighted = undefined + 1;
+									
+								}
+								});
+							}
+						}
+
+					if ('location' === d.klass) {
+						selection.attr('stroke-width', self.display.collapsedLocations[d.id] ? 5 : 1);}
+				});
 
 			},
 
@@ -1300,13 +1365,24 @@
 				.attr('y', 40)
 				.attr('dominant-baseline', 'middle')
 				.text('Task ' + qlabel + ': ');
-
-			 quest.append('tspan')
+			
+			var lines = questions[Qindex].split('\n');
+ 			quest.append('tspan')
+ 				.attr('dx', '10')
+ 				.style('font-size', '16px')
+ 				.style('font-weight', 'normal')
+ 				.attr('fill', 'black')
+ 				.attr('dominant-baseline', 'middle')
+ 				.text(lines[0]);   // global question ID
+ 				
+ 			quest.append('tspan')
+ 				.attr('x', '92')
+ 				.attr('dy', '15')
 				.style('font-size', '16px')
 				.style('font-weight', 'normal')
 				.attr('fill', 'black')
 				.attr('dominant-baseline', 'middle')
-				.text(questions[Qindex]);   // global question ID
+				.text(lines[1]);   // global question ID
 			return quest;
 		}
 
@@ -1722,7 +1798,7 @@
 
 			}
 			if(qType === 200)
-			    content.hideGraph('Click \'Start\' when ready', 'Task 1:  For the subnetwork containing the most nodes, \n mark the nodes that are missing in one graph but not the other.');
+			    content.hideGraph('Click \'Start\' when ready', 'Task 1:  For the subnetwork containing the most nodes, mark the nodes that\nare missing in one graph but not the other.');
 		///////////////////////////////////////////////////////////////////////////////////////////
 
 		// Create Button "Next Question"

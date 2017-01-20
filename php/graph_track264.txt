@@ -1,0 +1,9 @@
+13px	67.9922px	1810.99px	993.996px	1857	1150
+0	1484769420415	translate(452.75,497)scale(1,1)translate(0,0)scale(1)	translate(1358.25,497)scale(1,1)translate(0,0)scale(1)
+1	1484769678103	translate(452.75,497)scale(0.7,0.7)translate(0,0)scale(1)	translate(1358.25,497)scale(0.7,0.7)translate(0,0)scale(1)
+2	1484769697633	translate(452.75,497)scale(0.6,0.6)translate(0,0)scale(1)	translate(1358.25,497)scale(0.6,0.6)translate(0,0)scale(1)
+3	1484769702885	translate(905.5,497)scale(1, 1)scale(1,1)translate(-452.75, 0)translate(0,0)scale(1)	translate(905.5,497)scale(-1, 1)scale(1,1)translate(-452.75, 0)translate(0,0)scale(1)
+4	1484769707616	translate(905.5,497)scale(1, 1)scale(0.7,0.7)translate(-452.75, 0)translate(0,0)scale(1)	translate(905.5,497)scale(-1, 1)scale(0.7,0.7)translate(-452.75, 0)translate(0,0)scale(1)
+5	1484769711391	translate(905.5,497)scale(1, 1)scale(0.6,0.6)translate(-452.75, 0)translate(0,0)scale(1)	translate(905.5,497)scale(-1, 1)scale(0.6,0.6)translate(-452.75, 0)translate(0,0)scale(1)
+6	1484769715631	translate(905.5,497)scale(1,1)translate(0,0)scale(1)
+7	1484769868119	translate(905.5,497)scale(0.7,0.7)translate(0,0)scale(1)

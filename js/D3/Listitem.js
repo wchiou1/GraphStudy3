@@ -20,6 +20,7 @@
 			var fill = config.fill || 'white';
 
 			this.base = this.parent.append('g')
+				.attr("class", "listitem")
 				.style('pointer-events', 'all')
 				.on('click', this.onClick.bind(this))
 				.on('mouseover', this.onMouseOver.bind(this))

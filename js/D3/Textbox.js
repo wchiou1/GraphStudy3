@@ -21,6 +21,7 @@
             this.x = config.x - this.width/2;
             this.y = config.y - this.height/2;
 			this.rect = this.base.append('rect')
+				.attr("class", "consolidated_border")
 				.attr('width', this.width).attr('height', this.height)
 				.attr('x', -this.width/2).attr('y', -this.height/2)
 				.attr('rx', round).attr('ry', round)
@@ -29,11 +30,11 @@
 				.attr('fill', fill);
 
             this.text =  this.base.append('text')
-                            .style('font-size', '12px')
-                            .attr('fill', 'grey')
-                            .attr('x',  -this.width/2 + 10)
-                            .attr('y',  -this.height/2 + 17 )
-                            .text('Select');
+				.style('font-size', '12px')
+				.attr('fill', 'grey')
+				.attr('x',  -this.width/2 + 10)
+				.attr('y',  -this.height/2 + 17 )
+				.text('Select');
 
             this.base.append('rect')
 				.attr('width', this.height-4).attr('height', this.height-4)
@@ -64,6 +65,17 @@
                        this.options[i].deselect();
                     }
                 }
+				//Return opacity to normal
+ 				this.rect.attr('opacity', 1);
+ 				//Remove exapnded border
+ 				d3.selectAll(".expanded_border").remove();
+ 				//Remove the options from d3
+ 				d3.selectAll(".listitem").remove();
+ 				//Empty options list
+ 				for(var i =0; i < 6; i++)
+ 					this.options.pop();
+ 				this.state = false;
+ 				this.text.text(value);
                 if(this.parentcallback) { this.parentcallback(value);}
                 },
 
@@ -73,6 +85,7 @@
 				    this.state = true;
 				    this.rect.attr('opacity', 0);
 				    this.base.append('rect')
+						.attr("class", "expanded_border")
                         .attr('width', this.width).attr('height', 15*6 + 2)
                         .attr('x', -this.width/2).attr('y', -this.height/2 - 33 )
                         .attr('rx', 2).attr('ry', 2)
@@ -112,6 +125,7 @@
 				    this.state = true;
 				    this.rect.attr('opacity', 0);
 				    this.base.append('rect')
+						.attr("class", "expanded_border")
                         .attr('width', this.width).attr('height', 15*6 + 2)
                         .attr('x', -this.width/2).attr('y', -this.height/2 - 33 )
                         .attr('rx', 2).attr('ry', 2)

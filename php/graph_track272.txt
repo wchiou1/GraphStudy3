@@ -1,0 +1,5 @@
+13px	67.9922px	1947px	993.996px	1993	1182
+0	1486152577523	translate(486.75,497)scale(1,1)translate(0,0)scale(1)	translate(1460.25,497)scale(1,1)translate(0,0)scale(1)
+0	1486152658168	translate(486.75,497)scale(1,1)translate(2,0)scale(1)	translate(1460.25,497)scale(1,1)translate(2,0)scale(1)
+0	1486152674709	translate(486.75,497)scale(1,1)translate(2,0)scale(1)	translate(1460.25,497)scale(1,1)translate(2,0)scale(1)
+0	1486152688681	translate(486.75,497)scale(1,1)translate(2,0)scale(1)	translate(1460.25,497)scale(1,1)translate(2,0)scale(1)

@@ -1,0 +1,4 @@
+13px	18px	2005.99px	993.996px	2052	1210
+0	1486753331395	translate(1003,497)scale(1, 1)scale(1,1)translate(-501.5, 0)translate(0,0)scale(1)	translate(1003,497)scale(-1, 1)scale(1,1)translate(-501.5, 0)translate(0,0)scale(1)
+1	1486753346821	translate(1003,497)scale(1, 1)scale(0.7,0.7)translate(-501.5, 0)translate(0,0)scale(1)	translate(1003,497)scale(-1, 1)scale(0.7,0.7)translate(-501.5, 0)translate(0,0)scale(1)
+2	1486753351784	translate(1003,497)scale(1, 1)scale(0.6,0.6)translate(-501.5, 0)translate(0,0)scale(1)	translate(1003,497)scale(-1, 1)scale(0.6,0.6)translate(-501.5, 0)translate(0,0)scale(1)

@@ -1,0 +1,3 @@
+0: Question loaded in at 1487020774785
+0: User finished question at 1487020791581
+0: User submitted certainty of s5 at 1487020803952

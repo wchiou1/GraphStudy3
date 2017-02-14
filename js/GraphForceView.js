@@ -11,6 +11,7 @@
 
 			$P.ForceView.call(self, config);
 
+			self.certaintyPanel = false;
 			self.hiddenNodeTypes = {};
 			self.highlights = {};
 			self.lowlights = {}; 
@@ -352,11 +353,10 @@
 					 {
 						self.highlight(d);
 					 	pre_state = true;
-						for(var k in scaleboxes)
-							{
-							var s = scaleboxes[k];
-							s.setEnabled();
-							}
+						but_state = true;
+						but_color = 'green';
+						but_rect.attr('stroke', but_color);
+						
 					 }
 				   }
 				   else
@@ -1174,7 +1174,7 @@
 			var mode = (content.mode === 'sm')? 'Small Multiples':(content.mode === 'soup')? ' VisGumbo': ' VisMirrors';
 			var qi = content.parent.getQid();    	// first question
 			var ql = content.parent.getQlabel();		// question label
-
+			
 			content.svg.append('text')
 				.style('font-size', '14px')
 		  		.attr('fill', 'black')
@@ -1269,7 +1269,7 @@
 		var qType = content.parent.getQtype();
 		var time_limited = (qType === 103 || qType === 3) && !answerReady;
 
-		var but_text = (content.parent.getQcount() >= (numTrials - 1) && !time_limited)? ' Finish' : time_limited? 'Done': ' Next ';
+		var but_text = (content.parent.getQcount() >= (numTrials - 1) && !time_limited)? ' Next' : time_limited? 'Done': ' Next ';
 		if(qType === 200) but_text = 'Start';
 
 		var but_text = button.append('text')
@@ -1429,20 +1429,18 @@
 					scale.state = !state;
 			}
 			if(state) self.curCertainty = id;
-			if(pre_state){
+			//if(pre_state){
 				but_state = true;
 				but_color = 'green';
 				but_rect.attr('stroke', but_color);
-			}
+			//}
 		}
 		var getTextInput = function(id){
 				console.log(id);
 				pre_state = true;
-				for(var k in scaleboxes)
-				{
-				  var s = scaleboxes[k];
-				  s.setEnabled();
-				}
+				but_state = true;
+				but_color = 'green';
+				but_rect.attr('stroke', but_color);
 				self.curSelection = id;
 		}
 		function checkbox(id, y) {
@@ -1673,113 +1671,7 @@
 
 		}
 
-		 x = sep1 + width* 0.15;
-		 y = 20;
-		  legend.append('text')
-			.style('font-size', '14px')
-			.attr('x', x + 65)
-			.attr('y', y)
-			.attr('fill', 'black')
-			.attr('dominant-baseline', 'middle')
-			.text('Certainty');
-
-			y += 20;
-			legend.append('text')
-			.style('font-size', '11px')
-			.attr('x', x)
-			.attr('y', y)
-			.attr('fill', 'black')
-			.attr('dominant-baseline', 'middle')
-			.text('Low');
-
-
-			legend.append('text')
-			.style('font-size', '11px')
-			.attr('x', x + 180)
-			.attr('y', y)
-			.attr('fill', 'black')
-			.attr('dominant-baseline', 'middle')
-			.text('High');
-
-			y += 15;
-			x += 5;
-			legend.append('text')
-			.style('font-size', '11px')
-			.attr('x', x)
-			.attr('y', y)
-			.attr('fill', 'black')
-			.attr('dominant-baseline', 'middle')
-			.text('1');
-
-			x += 30;
-			legend.append('text')
-			.style('font-size', '11px')
-			.attr('x', x)
-			.attr('y', y)
-			.attr('fill', 'black')
-			.attr('dominant-baseline', 'middle')
-			.text('2');
-
-			x += 30;
-			legend.append('text')
-			.style('font-size', '11px')
-			.attr('x', x)
-			.attr('y', y)
-			.attr('fill', 'black')
-			.attr('dominant-baseline', 'middle')
-			.text('3');
-
-			x += 30;
-			legend.append('text')
-			.style('font-size', '11px')
-			.attr('x', x)
-			.attr('y', y)
-			.attr('fill', 'black')
-			.attr('dominant-baseline', 'middle')
-			.text('4');
-
-			x += 30;
-			legend.append('text')
-			.style('font-size', '11px')
-			.attr('x', x)
-			.attr('y', y)
-			.attr('fill', 'black')
-			.attr('dominant-baseline', 'middle')
-			.text('5');
-
-			x += 30;
-			legend.append('text')
-			.style('font-size', '11px')
-			.attr('x', x)
-			.attr('y', y)
-			.attr('fill', 'black')
-			.attr('dominant-baseline', 'middle')
-			.text('6');
-
-			x += 30;
-			legend.append('text')
-			.style('font-size', '11px')
-			.attr('x', x)
-			.attr('y', y)
-			.attr('fill', 'black')
-			.attr('dominant-baseline', 'middle')
-			.text('7');
-
-			y += 25;
-			x = sep1 + width * 0.15 + 15; ;
-			 scalebox('s1', x, y);
-			 x += 30;
-			 scalebox('s2', x, y);
-			x += 30;
-			 scalebox('s3', x, y);
-			 x += 30;
-			 scalebox('s4', x, y);
-			 x += 30;
-			 scalebox('s5', x, y);
-			 x += 30;
-			 scalebox('s6', x, y);
-			 x += 30;
-			 scalebox('s7', x, y);
+		 
 			}
 
 
@@ -1809,7 +1701,70 @@
 		var titleW = 1300;
 		var titleH = 150;
 		var exp_ready = false;
+		var displayScaleBoxes = function(){
+			x = sep1 + width* 0.15;
+			y = 20;
+			legend.append('text')
+				.style('font-size', '14px')
+				.attr('x', x + 65)
+				.attr('y', y)
+				.attr('fill', 'black')
+				.attr('dominant-baseline', 'middle')
+				.text('Certainty');
 
+			y += 20;
+			legend.append('text')
+				.style('font-size', '11px')
+				.attr('x', x)
+				.attr('y', y)
+				.attr('fill', 'black')
+				.attr('dominant-baseline', 'middle')
+				.text('Low');
+
+
+			legend.append('text')
+				.style('font-size', '11px')
+				.attr('x', x + 180)
+				.attr('y', y)
+				.attr('fill', 'black')
+				.attr('dominant-baseline', 'middle')
+				.text('High');
+
+			y += 15;
+			x += 5;
+			for (var i = 1; i <= 7; i++) { 
+				legend.append('text')
+				.style('font-size', '11px')
+				.attr('x', x)
+				.attr('y', y)
+				.attr('fill', 'black')
+				.attr('dominant-baseline', 'middle')
+				.text(i);
+
+				x += 30;
+			}
+			y += 25;
+			x = sep1 + width * 0.15 + 15;
+			scalebox('s1', x, y);
+			x += 30;
+			scalebox('s2', x, y);
+			x += 30;
+			scalebox('s3', x, y);
+			x += 30;
+			scalebox('s4', x, y);
+			x += 30;
+			scalebox('s5', x, y);
+			x += 30;
+			scalebox('s6', x, y);
+			x += 30;
+			scalebox('s7', x, y);
+		};
+		button.on("mouseover", function(){
+			but_rect.attr('fill', '#aaa');
+		});
+		button.on("mouseleave", function(){
+			but_rect.attr('fill', '#ddd');
+		});
 		button.on("click", function() {
 
 				var qid = content.parent.getQid();
@@ -1837,7 +1792,7 @@
 						else{
 							// load next training
 							curQ = displayNone();
-							but_color = 'green';
+							but_color = 'red';
 							but_rect.attr('stroke', but_color);
 						
 							event = {
@@ -1858,95 +1813,7 @@
 				  {
 
 					//content.parent.getNodeSelection();
-				  if (qType > 100 && qType < 200)
-				  {
-				  
-				  	 qi++;
-				  	 
-				  	 var pCount = content.parent.getPcount();
-				  	 console.log('Here is pCount: '+ pCount);
-				   if(pCount >= numPractice)  // the user just finished the last practice task
-				    {
-
-				    	if(qType === 102 || qType === 2 || qType === 104 || qType === 4)
-		  					answerToRecord = content.parent.getNodeSelection();
-		  				else
-		  					answerToRecord = self.curSelection;
-
-		  				toRecord = {
-		  							answer: answerToRecord,
-		  							certainty: self.curCertainty
-		  							};
-
-				    	var answer = content.parent.recordAnswer(toRecord);
-				    	if(answer)
-				    	{
-				    	
-				    	curQ.remove();
-				    	var thanks = legend.append('text')
-							.style('font-size', '16px')
-							.style('font-weight', 'bold')
-							.style('font-decoration', 'underline')
-							.attr('fill', 'black')
-							.attr('x', 20)
-							.attr('y', 40)
-							.attr('dominant-baseline', 'middle')
-							.text('You have successfully completed the tutorial! Press "Start" to begin the experiment. ');
-
-						exp_ready = true;
-
-						legend.append('rect')
-							.attr('x', sep1 + 10)
-							.attr('y', 2)
-							.attr('width', sep2 - sep1 - 20)
-							.attr('height', 93)
-							.attr('stroke-width', 1)
-							.attr('stroke', 'white')
-							.attr('fill', 'white');
-
-		  				qType = 1;
-		  				content.parent.setQid(-1);
-		  				content.parent.newQuestion();
-		  				}
-		  			else {
-		  				qi--;
-		  			}
-
-				    }
-				    else {
-				    	// load a new practice question
-				    	if(qType === 102 || qType === 2 || qType === 104 || qType === 4)
-		  					answerToRecord = content.parent.getNodeSelection();
-		  				else
-		  					answerToRecord = self.curSelection;
-						toRecord = {
-		  							answer: answerToRecord,
-		  							certainty: self.curCertainty
-		  							};
-
-				    	var answer = content.parent.recordAnswer(toRecord);
-				    	if(answer)
-				    	{
-				    		content.parent.newQuestion();
-							var qid = content.parent.getQid();
-							curQ.remove();
-
-							curQ = displayPractice(qid - 202);
-							but_color = 'red';
-							but_rect.attr('stroke', but_color);
-							pre_state = false;
-							but_state=false;
-
-
-
-				    	}
-						else {
-							qi--;
-						}
-				    }
-				  }
-				  else {
-
+				 
 				  if(exp_ready)
 				   {
 				     exp_ready = false;
@@ -1954,127 +1821,153 @@
 
 				  else {
 					if(!time_limited) ql++;
-					if (ql > numTrials)   // the user just answered the last question
-					{
-						// submit answers
-						if(qType === 102 || qType === 2 || qType === 104 || qType === 4)
-		  					answerToRecord = content.parent.getNodeSelection();
-		  				else
-		  					answerToRecord = self.curSelection;
-						toRecord = {
-		  							answer: answerToRecord,
-		  							certainty: self.curCertainty
-		  							};
-
-						content.parent.recordAnswer(toRecord);
-						content.parent.submitAnswers();
-						// Display thank you message
-						curQ.remove();
-						var thanks = legend.append('text')
-							.style('font-size', '16px')
-							.style('font-weight', 'bold')
-							.style('font-decoration', 'underline')
-							.attr('fill', 'black')
-							.attr('x', 20)
-							.attr('y', 40)
-							.attr('dominant-baseline', 'middle')
-							.text('Thank you for your participation!');
-						alert('Thank you for your participation!');
+					
+					if(time_limited){
+						content.override_timeout = true;
+						content.parent.setEndT();
+						conceal.remove();
+						time_limited = false;
+						but_color = 'red';
 						but_state = false;
-						pre_state = false;
-
-					}
-
-					else {
-							if(time_limited)
-							{
-								content.override_timeout = true;
-								content.parent.setEndT();
-								conceal.remove();
-								time_limited = false;
-								but_color = 'red';
-								but_state = false;
-								but_rect.attr('stroke', but_color);
-								but_text.remove();
-								if(qid < (numTrials - 1))
-								{
-								but_text = button.append('text')
-											.style('font-size', '16px')
-											.attr('fill', 'black')
-											.attr('x', sep2 +  width*0.33 / 4 - 35)
-											.attr('y', height/2 - 8  )
-											.text('Next');
-								}
-								else
-								{
-								but_text = button.append('text')
-											.style('font-size', '16px')
-											.attr('fill', 'black')
-											.attr('x', sep2 +  width*0.33 / 4 - 35)
-											.attr('y', height/2 - 8  )
-											.text('Finish');
-
-
-								}
-
-								content.hideGraph('Please select answer');
-							}
+						but_rect.attr('stroke', but_color);
+						but_text.remove();
+						if(qid < (numTrials - 1))
+						{
+						but_text = button.append('text')
+									.style('font-size', '16px')
+									.attr('fill', 'black')
+									.attr('x', sep2 +  width*0.33 / 4 - 35)
+									.attr('y', height/2 - 8  )
+									.text('Next');
+						}
 						else
 						{
-						// Load a new question
+						but_text = button.append('text')
+									.style('font-size', '16px')
+									.attr('fill', 'black')
+									.attr('x', sep2 +  width*0.33 / 4 - 35)
+									.attr('y', height/2 - 8  )
+									.text('Next');
+
+
+						}
+
+						content.hideGraph('Please select answer');
+					}
+					else{
+					// Load a new question
 						but_state = false;
 						pre_state = false;
 						if(qType === 102 || qType === 2 || qType === 104 || qType === 4){
-		  					content.parent.setEndT();
-		  					answerToRecord = content.parent.getNodeSelection();
-		  					}
-		  				else
-		  					answerToRecord = self.curSelection;
-						toRecord = {
-		  							answer: answerToRecord,
-		  							certainty: self.curCertainty
-		  							};
+							content.parent.setEndT();
+							answerToRecord = content.parent.getNodeSelection();
+							}
+						else
+							answerToRecord = self.curSelection;
+						
 
+						if(!self.certaintyPanel){
+							$.post('./php/track_stages.php',
+									{"id": window.userID, "log": ""+window.qID+": User finished question at "+Date.now()+"\n"}
+								);
+							//We must setup the certainty panel!
+							self.certaintyPanel = true;
+							content.hideGraph('Please enter how certain you are of your answer',' ');
+							displayScaleBoxes();
+							but_text.remove();
+							but_text = button.append('text')
+								.style('font-size', '16px')
+								.attr('fill', 'black')
+								.attr('x', sep2 +  width*0.33 / 4 - 68)
+								.attr('y', height/2 - 8  )
+								.text('Submit Certainty');
+							but_state = false;
+							but_color = 'red';
+							but_rect.attr('stroke', but_color);
+							for(var k in scaleboxes)
+							{
+								var s = scaleboxes[k];
+								s.setEnabled();
+							}
+							//If there is a listbox, remove it
+							d3.selectAll(".textbox_base").remove();
+							return;
+						}
+						if(ql !== 38){
+							$.post('./php/track_stages.php',
+								{"id": window.userID, "log": ""+window.qID+": User submitted certainty of "+self.curCertainty+" at "+Date.now()+"\n"}
+								);
+						}
+						self.certaintyPanel = false;
+						toRecord = {
+							answer: answerToRecord,
+							certainty: self.curCertainty
+							};
 						if(qType !== 200) content.parent.recordAnswer(toRecord);
-						content.parent.newQuestion();
-						var qid = content.parent.getQid();
+					
+					
+					
+					
 						if (curQ) curQ.remove();
 
+						if (ql > numTrials+1){   // the user just answered the last question
 
+							content.parent.submitAnswers();
+							// Display thank you message
+							curQ.remove();
+							conceal = legend.append('rect')
+								.attr('x', sep1+4)
+								.attr('y', 5)
+								.attr('width', sep2 - sep1 - 15)
+								.attr('height', height - 30)
+								.attr('stroke', 'white')
+								.attr('fill','white');
+							curQ.remove();
+							content.hideGraph('Thank you for your participation!', 'END OF EXPERIMENT');
+							button.remove();
+							but_state = false;
+							pre_state = false;
+							return;
+
+						}
 						
 						//console.log('View will now request reload');
 
-						if(ql === 37 && content.parent.getTransition())
-							{
-								ql--;
-								content.parent.resetTransition();
-								content.hideGraph('Click Start when ready', 'Task 2: Estimate the number of node differences between the two graphs');
-								but_color = 'green';
-								but_rect.attr('stroke', but_color);
-								but_text.remove();
-								but_text = button.append('text')
-											.style('font-size', '16px')
-											.attr('fill', 'black')
-											.attr('x', sep2 +  width*0.33 / 4 - 35)
-											.attr('y', height/2 - 8  )
-											.text('Start');
-											but_state = true;
-								 legend.append('rect')
-									.attr('x', sep1+4)
-									.attr('y', 5)
-									.attr('width', sep2 - sep1 - 15)
-									.attr('height', height - 30)
-									.attr('stroke', 'white')
-									.attr('fill','white');
-							}
-							//titleScreen(parentSelection, '', titleW, titleH, 'Task 2: Estimate the number of node differences between the two graphs', 'Start', qid, content.parent, [] );
-																																						/*['Click on a node to highlight and add it to selection ',
-				    																																' To de-select a highlighted node, click it again',
-				    																																' Click "Next" once you have finalized your selection',
-				    																																' Now, click the "Begin Practice" button to start']);*/
-						
-						else 
-						{
+						if(ql === 38 && content.parent.getTransition()){
+							$.post('./php/track_stages.php',
+								{"id": window.userID, "log": ""+window.qID+": User submitted certainty of "+self.curCertainty+" at "+Date.now()+"\n"}
+							);
+							ql--;
+							content.parent.resetTransition();
+							content.hideGraph('Click Start when ready', 'Task 2: Estimate the number of node differences between the two graphs');
+							but_color = 'green';
+							but_rect.attr('stroke', but_color);
+							but_text.remove();
+							but_text = button.append('text')
+								.style('font-size', '16px')
+								.attr('fill', 'black')
+								.attr('x', sep2 +  width*0.33 / 4 - 35)
+								.attr('y', height/2 - 8  )
+								.text('Start');
+								but_state = true;
+							legend.append('rect')
+								.attr('x', sep1+4)
+								.attr('y', 5)
+								.attr('width', sep2 - sep1 - 15)
+								.attr('height', height - 30)
+								.attr('stroke', 'white')
+								.attr('fill','white');
+								self.certaintyPanel = true;
+						}
+						//titleScreen(parentSelection, '', titleW, titleH, 'Task 2: Estimate the number of node differences between the two graphs', 'Start', qid, content.parent, [] );
+																																				/*['Click on a node to highlight and add it to selection ',
+																																			' To de-select a highlighted node, click it again',
+																																				' Click "Next" once you have finalized your selection',
+																																				' Now, click the "Begin Practice" button to start']);*/
+					
+						else {
+							content.parent.newQuestion();
+							var qid = content.parent.getQid();
 							curQ = displayQuest(qid, ql, qt);
 							but_color = 'red';
 							but_rect.attr('stroke', but_color);
@@ -2086,9 +1979,6 @@
 												};
 							content.parent.receiveEvent(event);
 						}
-					}
-
-					}
 					}
 					}
 				  }

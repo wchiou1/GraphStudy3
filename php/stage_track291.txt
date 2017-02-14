@@ -1,0 +1,3 @@
+false User finished question 0 at 1486751623775
+User submitted certainty of s3 for 0 at 1486751642184
+false User finished question 1 at 1486751645363

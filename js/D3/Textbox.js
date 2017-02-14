@@ -15,8 +15,11 @@
 			var strokeWidth = config.strokeWidth || 2;
 			var fill = config.fill || 'white';
 			this.base = this.parent.append('g')
+				.attr("class", "textbox_base")
 				.style('pointer-events', 'all')
 				.on('click', this.onClick.bind(this))
+				.on('mouseover',this.onMouseover.bind(this))
+				.on('mouseleave',this.onMouseleave.bind(this))
 				.attr('transform', 'translate('+config.x+','+config.y+')');
             this.x = config.x - this.width/2;
             this.y = config.y - this.height/2;
@@ -37,6 +40,7 @@
 				.text('Select');
 
             this.base.append('rect')
+				.attr("class", "textbox_button")
 				.attr('width', this.height-4).attr('height', this.height-4)
 				.attr('x', this.width/2- this.height+2).attr('y', -this.height/2+2)
 				.attr('stroke', 'white')
@@ -116,6 +120,12 @@
 				    this.options[length].giveAnswer();
 
             },
+			onMouseover: function(){
+				d3.select(".textbox_button").attr('fill', '#aaa');
+			},
+			onMouseleave: function(){
+				d3.select(".textbox_button").attr('fill', '#ddd');
+			},
 			onClick: function() {
 				//this.state = !this.state;
 				this.options = [];

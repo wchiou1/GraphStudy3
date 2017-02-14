@@ -1063,8 +1063,8 @@
 				}
 				if( equal )
 					{
-					myText = 'Your answer is correct.';
-					self.display.viewConstructor.makeDialog(d3.select(self.element), myText, 400, 300, 'Perfect', id, self);
+					//myText = 'Your answer is correct.';
+					//self.display.viewConstructor.makeDialog(d3.select(self.element), myText, 400, 300, 'Perfect', id, self);
 					/*
 					new $P.HintBox({
 						parent: this,
@@ -1082,8 +1082,8 @@
 					}
 				else
 				    {
-				    	myText = 'The correct answer is: ' + correct[id - 203];
-				    	self.display.viewConstructor.makeDialog(d3.select(self.element), myText, 400, 300, 'Correction', id, self);
+				    	//myText = 'The correct answer is: ' + correct[id - 203];
+				    	//self.display.viewConstructor.makeDialog(d3.select(self.element), myText, 400, 300, 'Correction', id, self);
 				    	//self.parent.resetPCount(); 
 
 				    	//alert('The correct answer is: ' + correct[id - 101]);
@@ -1260,51 +1260,51 @@
 			},
 			hideGraph: function(text, task) {
 			  		 var self = this;
-					self.svg.append('rect')
-							.attr('x', 0)
-							.attr('y', 0)
-							.attr('width', self.w)
-							.attr('height', self.h)
-							.attr('stroke-width', 1)
-							.attr('stroke', 'white')
-							.attr('fill', 'white');
-
-					self.svg.append('text')
-							.style('font-size', '24px')
-							.style('font-weight', 'bold')
-							.style('font-decoration', 'underline')
-							.attr('fill', 'black')
-							.attr('x', self.w/2 - 100)
-							.attr('y', self.h/2 - 20)
-							.attr('dominant-baseline', 'middle')
-							.text(text);
+					var hider= self.svg.append('rect')
+						.attr('x', 0)
+						.attr('y', 0)
+						.attr('width', self.w)
+						.attr('height', self.h)
+						.attr('stroke-width', 1)
+						.attr('stroke', 'white')
+						.attr('fill', 'white');
+					var itext = self.svg.append('text')
+						.style('font-size', '24px')
+						.style('font-weight', 'bold')
+						.style('font-decoration', 'underline')
+						.attr('fill', 'black')
+						.attr('x', self.w/2 - text.length*5.5)
+						.attr('y', self.h/2 - 20)
+						.attr('dominant-baseline', 'middle')
+						.text(text);
 					if(task)
 					{
 					var x;
 					var qi = self.parent.getQid();
-					if(qi < 34 || qi === 200) x = 220;
+					if(qi === 215) x = 660;
+					else if(qi < 34 || qi === 200) x = 220;
 					else x = 440;
 					var strings = task.split('\n');
 					self.svg.append('text')
 						.style('font-size', '26px')
- 						.style('font-weight', 'bold')
- 						.style('font-decoration', 'underline')
- 						.attr('fill', 'black')
- 						.attr('x', self.w/2 - strings[0].length*6.5)
- 						.attr('y', 200)
- 						.attr('dominant-baseline', 'middle')
- 						.text(strings[0]);
- 							
-					self.svg.append('text')
- 						.style('font-size', '26px')
- 						.style('font-weight', 'bold')
- 						.style('font-decoration', 'underline')
- 						.attr('fill', 'black')
- 						.attr('x', self.w/2 - strings[1].length*6.5)
- 						.attr('y', 200+25)
- 						.attr('dominant-baseline', 'middle')
- 						.text(strings[1]);
-
+						.style('font-weight', 'bold')
+						.style('font-decoration', 'underline')
+						.attr('fill', 'black')
+						.attr('x', self.w/2 - strings[0].length*6.5)
+						.attr('y', 200)
+						.attr('dominant-baseline', 'middle')
+						.text(strings[0]);
+					if(task.includes('\n')){
+						self.svg.append('text')
+							.style('font-size', '26px')
+							.style('font-weight', 'bold')
+							.style('font-decoration', 'underline')
+							.attr('fill', 'black')
+							.attr('x', self.w/2 - strings[1].length*6.5)
+							.attr('y', 200+25)
+							.attr('dominant-baseline', 'middle')
+							.text(strings[1]);
+					}
 					}
 			},
 			onTick: function() {
@@ -3949,6 +3949,9 @@
 			 		self.delLinkAtGraph = [];
 
 					console.log('Reload request received in content, qi ='+ qi);
+					$.post('./php/track_stages.php',
+						{"id": window.userID, "log": ""+qi+": Question loaded in at "+Date.now()+"\n"}
+					);
 			 		// initialize self.adjacency
 					for(var i=0; i < self.N; i++)
 						self.adjacency[i] = [];

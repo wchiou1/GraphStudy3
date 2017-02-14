@@ -1,0 +1,7 @@
+13px	18px	2005.99px	993.996px	2052	1210
+0	1486752442313	translate(1003,497)scale(1, 1)scale(1,1)translate(-501.5, 0)translate(0,0)scale(1)	translate(1003,497)scale(-1, 1)scale(1,1)translate(-501.5, 0)translate(0,0)scale(1)
+1	1486752448503	translate(1003,497)scale(1, 1)scale(0.7,0.7)translate(-501.5, 0)translate(0,0)scale(1)	translate(1003,497)scale(-1, 1)scale(0.7,0.7)translate(-501.5, 0)translate(0,0)scale(1)
+2	1486752454543	translate(1003,497)scale(1, 1)scale(0.6,0.6)translate(-501.5, 0)translate(0,0)scale(1)	translate(1003,497)scale(-1, 1)scale(0.6,0.6)translate(-501.5, 0)translate(0,0)scale(1)
+2	1486752622634	translate(1003,497)scale(1, 1)scale(0.6,0.6)translate(-501.5, 0)translate(0,0)scale(1)	translate(1003,497)scale(-1, 1)scale(0.6,0.6)translate(-501.5, 0)translate(0,0)scale(1)
+3	1486752770090	translate(1003,497)scale(1,1)translate(0,0)scale(1)
+3	1486752773468	translate(1003,497)scale(1,1)translate(0,0)scale(1)

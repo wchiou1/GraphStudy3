@@ -21,7 +21,7 @@
 
 			$P.Frame.call(this, config);
 
-			if (config.closeMenu) {this.add($P.ActionButton.create('close'));}
+			//if (config.closeMenu) {this.add($P.ActionButton.create('close'));}
 			/*
 			if (config.mainMenu || this.menu) {
 				this.menuButton = $P.ActionButton.create('menu');

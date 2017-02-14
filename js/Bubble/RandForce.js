@@ -111,6 +111,7 @@
             return this.brain; 
           },
           addGraph: function(graph, i) {
+				
                 var self = this;
                 var gr;
 
@@ -620,6 +621,7 @@
              						};
 
              		var type = this.getQtype();
+					console.log("Typechicken:"+type);
              		if(type > 100)
              		{
                     this.userAnswers.push(answer);

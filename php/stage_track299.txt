@@ -1,0 +1,7 @@
+Question 0 loaded in at 1486753331297
+false User finished question 0 at 1486753343816
+User submitted certainty of s1 for 0 at 1486753346616
+Question 1 loaded in at 1486753346654
+false User finished question 1 at 1486753349050
+User submitted certainty of s1 for 1 at 1486753351300
+Question 2 loaded in at 1486753351318

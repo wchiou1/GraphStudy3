@@ -1,0 +1,7 @@
+0: Question loaded in at 1487021155529
+0: User finished question at 1487021158815
+0: User submitted certainty of s3 at 1487021160954
+1: Question loaded in at 1487021160985
+1: User finished question at 1487021164209
+1: User submitted certainty of s2 at 1487021166301
+2: Question loaded in at 1487021166328

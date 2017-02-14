@@ -1,0 +1,28 @@
+0: Question loaded in at 1487019111881
+0: User finished question at 1487019115352
+0: User submitted certainty of s2 at 1487019118401
+1: Question loaded in at 1487019118447
+1: User finished question at 1487019133568
+1: User submitted certainty of s2 at 1487019135964
+2: Question loaded in at 1487019135985
+2: User finished question at 1487019142532
+2: User submitted certainty of s3 at 1487019145732
+3: Question loaded in at 1487019145762
+3: User finished question at 1487019149431
+3: User submitted certainty of s4 at 1487019152064
+4: Question loaded in at 1487019152091
+4: User finished question at 1487019194116
+4: User submitted certainty of s2 at 1487019196177
+5: Question loaded in at 1487019196223
+5: User finished question at 1487019200637
+5: User submitted certainty of s2 at 1487019205257
+6: Question loaded in at 1487019205294
+6: User finished question at 1487019208841
+6: User submitted certainty of s4 at 1487019210638
+7: Question loaded in at 1487019210661
+7: User finished question at 1487019214689
+7: User submitted certainty of s5 at 1487019217042
+8: Question loaded in at 1487019217074
+8: User finished question at 1487019228623
+8: User submitted certainty of s2 at 1487019231604
+9: Question loaded in at 1487019231645

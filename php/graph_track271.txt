@@ -1,0 +1,2 @@
+13px	67.9922px	1875px	993.996px	1921	1119
+0	1486152568598	translate(937.5,497)scale(1,1)translate(0,0)scale(1)

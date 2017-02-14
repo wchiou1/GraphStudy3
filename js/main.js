@@ -18,7 +18,6 @@
 
 		var canvas = $('#bgCanvas')[0];
 		var overlayCanvas = $('#overlayCanvas')[0];
-		var navCanvas = $('#navCanvas')[0];
 		window.addEventListener( 'keydown', function(event){
 			if(event.keyCode === 70)
 			{
@@ -30,25 +29,20 @@
 		//    THREEx.FullScreen.bindKey({ charCode: 'f'.charCodeAt(0) });
 		canvas.width = window.innerWidth;
 		canvas.height = window.innerHeight;
-		navCanvas.height = 50;
-		navCanvas.width = window.innerWidth;
 
 		$P.state.scene = new $P.Scene();
 		$P.state.scrollX = 0;
 
 		$P.state.mainCanvas = new $P.MainCanvas({element: canvas, scene: $P.state.scene});
 		$P.state.overlayCanvas = new $P.OverlayCanvas({element: overlayCanvas, scene: $P.state.scene});
-		$P.state.navCanvas = new $P.NavCanvas({element: navCanvas, scene: $P.state.scene});
 		$P.state.markDirty = function() {
 			this.mainCanvas.needsRedraw = true;
-			this.overlayCanvas.needsRedraw = true;
-			this.navCanvas.needsRedraw = true;};
+			this.overlayCanvas.needsRedraw = true;};
 		function render() {
 			console.log("Main render");
 			//$P.requestAnimationFrame(render);
 			$P.state.mainCanvas.draw();
 			$P.state.overlayCanvas.draw();
-			$P.state.navCanvas.draw();
 		}
 
 		

@@ -1,0 +1,110 @@
+0: Question loaded in at 1487094867253
+0: User finished question at 1487094870927
+0: User submitted certainty of s7 at 1487094873526
+1: Question loaded in at 1487094873588
+1: User finished question at 1487094882542
+1: User submitted certainty of s7 at 1487094885591
+2: Question loaded in at 1487094885607
+2: User finished question at 1487094889672
+2: User submitted certainty of s4 at 1487094892723
+3: Question loaded in at 1487094892757
+3: User finished question at 1487095031320
+3: User submitted certainty of s5 at 1487095041905
+4: Question loaded in at 1487095041930
+4: User finished question at 1487095045302
+4: User submitted certainty of s6 at 1487095047786
+5: Question loaded in at 1487095047804
+5: User finished question at 1487095050738
+5: User submitted certainty of s6 at 1487095054136
+6: Question loaded in at 1487095054167
+6: User finished question at 1487095068120
+6: User submitted certainty of s6 at 1487095070566
+7: Question loaded in at 1487095070595
+7: User finished question at 1487095074551
+7: User submitted certainty of s6 at 1487095086514
+8: Question loaded in at 1487095086536
+8: User finished question at 1487095092366
+8: User submitted certainty of s5 at 1487095094531
+9: Question loaded in at 1487095094563
+9: User finished question at 1487095097261
+9: User submitted certainty of s2 at 1487095101183
+10: Question loaded in at 1487095101224
+10: User finished question at 1487095104249
+10: User submitted certainty of s2 at 1487095108763
+11: Question loaded in at 1487095108787
+11: User finished question at 1487095115081
+11: User submitted certainty of s5 at 1487095117380
+12: Question loaded in at 1487095117407
+12: User finished question at 1487095130440
+12: User submitted certainty of s5 at 1487095132974
+13: Question loaded in at 1487095133017
+13: User finished question at 1487095142326
+13: User submitted certainty of s6 at 1487095144408
+14: Question loaded in at 1487095144435
+14: User finished question at 1487095169120
+14: User submitted certainty of s7 at 1487095171469
+15: Question loaded in at 1487095171489
+15: User finished question at 1487095201746
+15: User submitted certainty of s4 at 1487095207932
+16: Question loaded in at 1487095207958
+16: User finished question at 1487095210497
+16: User submitted certainty of s6 at 1487095212884
+17: Question loaded in at 1487095212909
+17: User finished question at 1487095218396
+17: User submitted certainty of s6 at 1487095220449
+18: Question loaded in at 1487095220480
+18: User finished question at 1487095248927
+18: User submitted certainty of s6 at 1487095251375
+19: Question loaded in at 1487095251395
+19: User finished question at 1487095254357
+19: User submitted certainty of s5 at 1487095260109
+20: Question loaded in at 1487095260135
+20: User finished question at 1487095266726
+20: User submitted certainty of s5 at 1487095270897
+21: Question loaded in at 1487095270914
+21: User finished question at 1487095276005
+21: User submitted certainty of s2 at 1487095278291
+22: Question loaded in at 1487095278318
+22: User finished question at 1487095283704
+22: User submitted certainty of s6 at 1487095285655
+23: Question loaded in at 1487095285686
+23: User finished question at 1487095298286
+23: User submitted certainty of s3 at 1487095300204
+24: Question loaded in at 1487095300223
+24: User finished question at 1487095309081
+24: User submitted certainty of s4 at 1487095317152
+25: Question loaded in at 1487095317175
+25: User finished question at 1487095322718
+25: User submitted certainty of s2 at 1487095325617
+26: Question loaded in at 1487095325640
+26: User finished question at 1487095337048
+26: User submitted certainty of s2 at 1487095341083
+27: Question loaded in at 1487095341113
+27: User finished question at 1487095347982
+27: User submitted certainty of s5 at 1487095351013
+28: Question loaded in at 1487095351034
+28: User finished question at 1487095365047
+28: User submitted certainty of s5 at 1487095367760
+29: Question loaded in at 1487095367800
+29: User finished question at 1487095376311
+29: User submitted certainty of s4 at 1487095383093
+30: Question loaded in at 1487095383115
+30: User finished question at 1487095395458
+30: User submitted certainty of s4 at 1487095397577
+31: Question loaded in at 1487095397602
+31: User finished question at 1487095422188
+31: User submitted certainty of s6 at 1487095425522
+32: Question loaded in at 1487095425550
+32: User finished question at 1487095428906
+32: User submitted certainty of s2 at 1487095431336
+33: Question loaded in at 1487095431362
+33: User finished question at 1487095435843
+33: User submitted certainty of s7 at 1487095438303
+34: Question loaded in at 1487095438333
+34: User finished question at 1487095443643
+34: User submitted certainty of s5 at 1487095446333
+35: Question loaded in at 1487095446364
+35: User finished question at 1487095453474
+35: User submitted certainty of s6 at 1487095456199
+35: User submitted certainty of s6 at 1487095461199
+36: Question loaded in at 1487095461222

@@ -1,0 +1,2 @@
+13px	18px	2005.99px	993.996px	2052	1210
+0	1487700626048	translate(501.5,497)scale(1,1)translate(0,0)scale(1)	translate(1504.5,497)scale(1,1)translate(0,0)scale(1)

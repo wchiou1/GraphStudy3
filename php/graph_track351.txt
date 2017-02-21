@@ -1,0 +1,10 @@
+13px	18px	2005.99px	993.996px	2052	1210
+0	1487700629808	translate(1003,497)scale(1, 1)scale(1,1)translate(-501.5, 0)translate(0,0)scale(1)	translate(1003,497)scale(-1, 1)scale(1,1)translate(-501.5, 0)translate(0,0)scale(1)
+1	1487700652625	translate(1003,497)scale(1, 1)scale(0.7,0.7)translate(-501.5, 0)translate(0,0)scale(1)	translate(1003,497)scale(-1, 1)scale(0.7,0.7)translate(-501.5, 0)translate(0,0)scale(1)
+2	1487700658054	translate(1003,497)scale(1, 1)scale(0.6,0.6)translate(-501.5, 0)translate(0,0)scale(1)	translate(1003,497)scale(-1, 1)scale(0.6,0.6)translate(-501.5, 0)translate(0,0)scale(1)
+3	1487700663298	translate(501.5,497)scale(1,1)translate(0,0)scale(1)	translate(1504.5,497)scale(1,1)translate(0,0)scale(1)
+3	1487700664498	translate(501.5,497)scale(1,1)translate(0,0)scale(1)	translate(1504.5,497)scale(1,1)translate(0,0)scale(1)
+3	1487700664607	translate(501.5,497)scale(1,1)translate(0,0)scale(1)	translate(1504.5,497)scale(1,1)translate(0,0)scale(1)
+3	1487700669537	translate(501.5,497)scale(1,1)translate(0,0)scale(1)	translate(1504.5,497)scale(1,1)translate(0,0)scale(1)
+3	1487700669665	translate(501.5,497)scale(1,1)translate(0,0)scale(1)	translate(1504.5,497)scale(1,1)translate(0,0)scale(1)
+3	1487700672999	translate(501.5,497)scale(1,1)translate(0,0)scale(1)	translate(1504.5,497)scale(1,1)translate(0,0)scale(1)

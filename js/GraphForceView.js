@@ -1248,6 +1248,7 @@
 
 		var button = legend.append('g')
 					.attr('id', 'button');
+		console.log("Version 3.0");
 
 		var conceal;
 		if(timeoutEvent)
@@ -1590,7 +1591,7 @@
 
 		else if((qType === 3 || qType === 103))
 		{
-			listBox = textbox('g0', x+30, y+20);
+			//listBox = textbox('g0', x+30, y+20);
 			/*
 			radiobox('g1', x, y);
 
@@ -1673,20 +1674,58 @@
 
 		 
 			}
-
+			
+			var countdown = legend.append('text')
+						.style('font-size', '28px')
+						.attr('x', sep1+400)
+						.attr('y', 50)
+						.attr('fill', 'black')
+						.attr('dominant-baseline', 'middle')
+						.text('');
 
 			if(time_limited)
 			{
 				but_state = true;
 				but_color = 'green';
 				but_rect.attr('stroke', but_color);
-				conceal = legend.append('rect')
+				/*conceal = legend.append('rect')
 								.attr('x', sep1+4)
 								.attr('y', 5)
 								.attr('width', sep2 - sep1 - 15)
 								.attr('height', height - 30)
 								.attr('stroke', 'white')
-								.attr('fill','white');
+								.attr('fill','white');*/
+				countdown.text(Math.ceil(content.getThreshold()/1000));
+				var x = setInterval(function() {
+					
+					var remaining = content.getRemaining();
+					
+					countdown.text(Math.ceil(remaining/1000));
+					if (remaining < 0 || time_limited == false) {
+						//Create the listBox only AFTER the countdown
+						listBox = textbox('g0', sep1+60, 50);
+						content.override_timeout = true;
+						content.parent.setEndT();
+						countdown.remove();
+						time_limited = false;
+						but_color = 'red';
+						but_state = false;
+						but_rect.attr('stroke', but_color);
+						but_text.remove();
+						
+						but_text = button.append('text')
+							.style('font-size', '16px')
+							.attr('fill', 'black')
+							.attr('x', sep2 +  width*0.33 / 4 - 35)
+							.attr('y', height/2 - 8  )
+							.text('Next');
+						
+						
+
+						content.hideGraph('Please select answer');
+						clearInterval(x);
+					}
+				}, 100);
 
 			}
 			if(qType === 200)
@@ -1825,7 +1864,6 @@
 					if(time_limited){
 						content.override_timeout = true;
 						content.parent.setEndT();
-						conceal.remove();
 						time_limited = false;
 						but_color = 'red';
 						but_state = false;

@@ -1185,8 +1185,16 @@
 				});
 				return maxT;
 			},
-
-
+			getRemaining: function(){
+					var start = this.parent.getStartT();
+					var elapsed = Date.now() - start;
+					return this.getThreshold()-elapsed;
+			},
+			getThreshold: function(){
+				var qi = this.parent.getQid();
+				var threshold = (qi%3 === 0)? 20000  : (qi%3 === 1)? 50000   :  80000 ;
+				return threshold;
+			},
 			onGraphsChanged: function(){
 			   var self = this;
 			   if(self.svg) {self.svg.remove();}
@@ -1211,7 +1219,7 @@
 						.attr('stroke', 'white')
 						.attr('fill', 'white');
 
-				  var qi = self.parent.getQid();
+				  var qi = this.parent.getQid();
 				  var threshold = (qi%3 === 0)? 20000  : (qi%3 === 1)? 50000   :  80000 ;
 
 				function hideGraph() {
@@ -1241,7 +1249,7 @@
 							.text('Please select answer');
 
 					self.parent.answerReady = true;
-					self.updateLegend(true);
+					//self.updateLegend(true);
 			   		self.updateSvgPosition();
 			   		self.parent.setEndT();
 
@@ -1250,8 +1258,8 @@
 				}
 
 				var qType = self.parent.getQtype();
-				if(qType === 103 || qType === 3)
-			   		setTimeout(hideGraph, threshold);
+				//if(qType === 103 || qType === 3)
+			   		//setTimeout(hideGraph, threshold);
 			},
 			onPositionChanged: function(dx, dy, dw, dh) {
 				$P.HtmlObject.prototype.onPositionChanged.call(this, dx, dy, dw, dh);

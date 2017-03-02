@@ -1676,14 +1676,15 @@
 			}
 			
 			var countdown = legend.append('text')
-						.style('font-size', '28px')
-						.attr('x', sep1+400)
-						.attr('y', 50)
-						.attr('fill', 'black')
-						.attr('dominant-baseline', 'middle')
-						.text('');
+				.attr("class", "countdown")
+				.style('font-size', '56px')
+				.attr('x', sep1+(sep2-sep1)/2 - 30)
+				.attr('y', 50)
+				.attr('fill', 'black')
+				.attr('dominant-baseline', 'middle')
+				.text('');
 
-			if(time_limited)
+			if(time_limited && content.graphs.length===2)
 			{
 				but_state = true;
 				but_color = 'green';
@@ -1741,11 +1742,11 @@
 		var titleH = 150;
 		var exp_ready = false;
 		var displayScaleBoxes = function(){
-			x = sep1 + width* 0.15;
+			x = sep1 + (sep2-sep1)/2 - 100;
 			y = 20;
 			legend.append('text')
-				.style('font-size', '14px')
-				.attr('x', x + 65)
+				.style('font-size', '20px')
+				.attr('x', x + 60)
 				.attr('y', y)
 				.attr('fill', 'black')
 				.attr('dominant-baseline', 'middle')
@@ -1753,7 +1754,7 @@
 
 			y += 20;
 			legend.append('text')
-				.style('font-size', '11px')
+				.style('font-size', '14px')
 				.attr('x', x)
 				.attr('y', y)
 				.attr('fill', 'black')
@@ -1762,8 +1763,8 @@
 
 
 			legend.append('text')
-				.style('font-size', '11px')
-				.attr('x', x + 180)
+				.style('font-size', '14px')
+				.attr('x', x + 175)
 				.attr('y', y)
 				.attr('fill', 'black')
 				.attr('dominant-baseline', 'middle')
@@ -1783,7 +1784,7 @@
 				x += 30;
 			}
 			y += 25;
-			x = sep1 + width * 0.15 + 15;
+			x = sep1 + (sep2-sep1)/2 - 85;
 			scalebox('s1', x, y);
 			x += 30;
 			scalebox('s2', x, y);

@@ -16,12 +16,12 @@
 			self.contentConfig = config.contentConfig || {};
 			self.contentConfig.graphs = self.graphs.slice();
 			self.contentConfig.generate1 = config.generate1;
-      self.contentConfig.generate2 = config.generate2;
-      self.contentConfig.generate3 = config.generate3;
+			self.contentConfig.generate2 = config.generate2;
+			self.contentConfig.generate3 = config.generate3;
 			self.contentConfig.sizeParam = config.sizeParam;
-      self.contentConfig.pID = config.pID;
-      self.contentConfig.star = config.star || false; 
-      self.contentConfig.brain = config.brain || false; 
+			self.contentConfig.pID = config.pID;
+			self.contentConfig.star = config.star || false; 
+			self.contentConfig.brain = config.brain || false; 
 			self.qCount = config.qCount || 0;
 			self.pCount = 0;
 			//self.qID = 101;

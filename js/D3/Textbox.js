@@ -34,7 +34,7 @@
 
             this.text =  this.base.append('text')
 				.style('font-size', '12px')
-				.attr('fill', 'grey')
+				.attr('fill', 'black')
 				.attr('x',  -this.width/2 + 10)
 				.attr('y',  -this.height/2 + 17 )
 				.text('Select');

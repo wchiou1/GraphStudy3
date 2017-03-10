@@ -1578,6 +1578,7 @@
 			//radiobox('g2', x, y);
 
 			legend.append('text')
+				.attr("class", "shiftclick")
 				.style('font-size', '14px')
 				.attr('x', textX - 30)
 				.attr('y', y )
@@ -1702,6 +1703,9 @@
 					var remaining = content.getRemaining();
 					
 					countdown.text(Math.ceil(remaining/1000));
+					
+					if(remaining < 10000)
+						countdown.attr('fill','red');
 					if (remaining < 0 || time_limited == false) {
 						//Create the listBox only AFTER the countdown
 						listBox = textbox('g0', sep1+60, 50);
@@ -1911,6 +1915,7 @@
 								);
 							//We must setup the certainty panel!
 							self.certaintyPanel = true;
+							d3.selectAll(".shiftclick").remove();
 							content.hideGraph('Please enter how certain you are of your answer',' ');
 							displayScaleBoxes();
 							but_text.remove();

@@ -1192,7 +1192,7 @@
 			},
 			getThreshold: function(){
 				var qi = this.parent.getQid();
-				var threshold = (qi%3 === 0)? 20000  : (qi%3 === 1)? 50000   :  80000 ;
+				var threshold = (qi%3 === 0)? 20000  : (qi%3 === 1)? 35000   :  80000 ;
 				return threshold;
 			},
 			onGraphsChanged: function(){

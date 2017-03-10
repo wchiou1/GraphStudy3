@@ -114,8 +114,8 @@
 						.attr('opacity', 0.7)
 						.attr('x', -this.length/2 - 4 - value * 1.5)
 						.attr('y', - this.length/2 - 4 - value * 1.5)
-						.attr('width', this.size * (this.length + 4 + value * 3))
-						.attr('height', this.size * (this.length + 4  + value * 3))
+						.attr('width', this.size * (this.length + 8 + value * 3))
+						.attr('height', this.size * (this.length + 8  + value * 3))
 						.attr('rx', this.size * 4)
 						.attr('ry', this.size * 3);}
 			},

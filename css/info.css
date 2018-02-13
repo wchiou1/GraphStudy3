@@ -12,3 +12,8 @@
 #infoBox .main{
     font-size: 14px;
 }
+.no-sel {
+   -moz-user-select: none; 
+        -ms-user-select: none;
+            user-select: none;
+}

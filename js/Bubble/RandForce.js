@@ -998,6 +998,7 @@
                         this.addGraph(ev, i+1);
                     }
 					self.startT = Date.now();
+					$('text').attr('class','no-sel');
                 	console.log(self.startT);
 					if(window.userID!=null){
 						var transforms="";
